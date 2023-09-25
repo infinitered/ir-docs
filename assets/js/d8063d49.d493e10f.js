@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkir_docs=self.webpackChunkir_docs||[]).push([[1201],{5417:i=>{i.exports=JSON.parse('{"title":"Tutorials","description":"Tutorials","slug":"/category/tutorials","permalink":"/ir-docs/docs/category/tutorials","navigation":{"next":{"title":"Making a Movie CLI","permalink":"/ir-docs/docs/gluegun-new/Tutorials/tutorial-making-a-movie-cli"}}}')}}]);
