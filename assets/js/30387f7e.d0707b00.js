@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkir_docs=self.webpackChunkir_docs||[]).push([[630],{6255:i=>{i.exports=JSON.parse('{"title":"Contributing","description":"Glugun CLI tool","slug":"/category/contributing","permalink":"/ir-docs/docs/category/contributing","navigation":{"next":{"title":"Contributing","permalink":"/ir-docs/docs/newgun/Contributing/"}}}')}}]);
