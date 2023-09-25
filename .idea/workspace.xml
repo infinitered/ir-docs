@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373af990-d3dc-4ace-9813-cb97626c18f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gluegun/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/intro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-config.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-filesystem.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-http.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-meta.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-package-manager.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-parameters.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-patching.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-print.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-prompt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-semver.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-strings.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-system.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Tutorials/_category_.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/trevorcoleman/dev/infinitered/ir-docs/docs/react-native-mlkit",
+    "last_opened_file_path": "/Users/trevorcoleman/dev/infinitered/ir-docs/docs/gluegun-new",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,17 +73,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/gluegun-new" />
       <recent name="$PROJECT_DIR$/docs/react-native-mlkit" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/docs/alpha" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/gluegun/Toolbox" />
+      <recent name="$PROJECT_DIR$/docs/gluegun-new/Tutorials" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/alpha" />
       <recent name="$PROJECT_DIR$/alpha/docs" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docs/bravo/current" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,6 +100,7 @@
       <updated>1695329141572</updated>
       <workItem from="1695329142696" duration="4839000" />
       <workItem from="1695649895763" duration="9025000" />
+      <workItem from="1695672866136" duration="1078000" />
     </task>
     <servers />
   </component>
