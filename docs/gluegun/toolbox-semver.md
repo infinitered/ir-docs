@@ -1,7 +1,3 @@
----
-title: SemVer
----
-
 A set of functions & values to work with semantic versions. The majority of these functions come
 straight from [semver](https://github.com/npm/node-semver)
 

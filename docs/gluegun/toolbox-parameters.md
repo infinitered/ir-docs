@@ -1,7 +1,3 @@
----
-title: Parameters
----
-
 Information about how the command was invoked. You can access this on the Gluegun toolbox. Check out this example of creating a new Reactotron plugin.
 
 ```sh

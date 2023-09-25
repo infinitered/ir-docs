@@ -1,7 +1,3 @@
----
-title: Filesystem
----
-
 A set of functions & values to work with files and directories. The majority of these functions come
 straight from [fs-jetpack](https://github.com/szwacz/fs-jetpack), a fantastic API for working with the
 file system. All jetpack-based functions have an equivalent `*Async` version if you need it.

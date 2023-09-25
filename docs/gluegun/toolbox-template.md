@@ -1,7 +1,3 @@
----
-title: Template
----
-
 Features for generating files based on a template. You can access these tools on the Gluegun toolbox.
 
 ## generate

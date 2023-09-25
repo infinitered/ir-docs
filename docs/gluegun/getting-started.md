@@ -134,4 +134,4 @@ Note that we sometimes call the `toolbox` the `context` or the `RunContext`. Tha
 
 ## Next steps
 
-There are _many_ more tools in the toolbox than just `print.info`. You can generate from a template, manipulate files, hit API endpoints via HTTP, access parameters, run system commands, ask for user input, and much more. Explore the [API docs](Toolbox/toolbox-api.md) in this folder to learn more or follow a tutorial like [Making a Movie CLI](../gluegun-new/Tutorials/tutorial-making-a-movie-cli.md).
+There are _many_ more tools in the toolbox than just `print.info`. You can generate from a template, manipulate files, hit API endpoints via HTTP, access parameters, run system commands, ask for user input, and much more. Explore the [API docs](toolbox-api.md) in this folder to learn more or follow a tutorial like [Making a Movie CLI](../gluegun-new/Tutorials/tutorial-making-a-movie-cli.md).

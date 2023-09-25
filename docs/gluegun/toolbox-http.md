@@ -1,7 +1,3 @@
----
-title: http
----
-
 Gives you the ability to talk to HTTP(s) web and API servers using [apisauce](https://github.com/skellock/apisauce) which
 is a thin wrapper around [axios](https://github.com/mzabriskie/axios).
 

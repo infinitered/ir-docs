@@ -1,6 +1,3 @@
----
-title: System
----
 Provides access to shell and OS processes.
 
 You can access these tools on the Gluegun toolbox, via `const { system } = require('gluegun')`, or directly via `const { system } = require('gluegun/system')`.

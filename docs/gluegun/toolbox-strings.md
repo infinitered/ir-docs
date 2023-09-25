@@ -1,6 +1,3 @@
----
-title: Strings
----
 Provides some helper functions to work with strings. This list is also added to the available filters
 inside your EJS templates.
 

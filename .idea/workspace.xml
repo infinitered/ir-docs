@@ -5,25 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373af990-d3dc-4ace-9813-cb97626c18f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/gluegun/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/intro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-config.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-filesystem.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-http.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-meta.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-package-manager.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-parameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-patching.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-print.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-prompt.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-semver.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-strings.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-system.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Toolbox/toolbox-template.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/newgun/Tutorials/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Contributing/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Contributing/contributing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Contributing/guide-architecture.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Contributing/releasing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/Introduction.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/runtime.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/newgun/sniff.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-api.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-config.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-config.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-filesystem.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-filesystem.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-http.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-http.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-meta.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-meta.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-package-manager.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-package-manager.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-parameters.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-parameters.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-patching.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-patching.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-print.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-print.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-prompt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-semver.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-semver.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-strings.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-strings.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-system.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-system.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/Toolbox/toolbox-template.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/toolbox-template.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/_sidebar.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/getting-started.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/getting-started.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gluegun/plugins.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gluegun/plugins.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +47,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "trevor-coleman"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7914cf92-9302-4a2f-a4e8-b022f80282bd" />
+        <option name="url" value="git@github.com:infinitered/ir-docs.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="3ip8hrmg" />
@@ -60,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/trevorcoleman/dev/infinitered/ir-docs/docs/gluegun-new",
+    "last_opened_file_path": "/Users/trevorcoleman/dev/infinitered/ir-docs/docs/newgun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,18 +95,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/newgun" />
+      <recent name="$PROJECT_DIR$/docs/newgun/Contributing" />
       <recent name="$PROJECT_DIR$/docs/gluegun-new" />
       <recent name="$PROJECT_DIR$/docs/react-native-mlkit" />
       <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/docs/alpha" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/newgun" />
+      <recent name="$PROJECT_DIR$/docs/gluegun" />
       <recent name="$PROJECT_DIR$/docs/gluegun/Toolbox" />
       <recent name="$PROJECT_DIR$/docs/gluegun-new/Tutorials" />
       <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/alpha" />
-      <recent name="$PROJECT_DIR$/alpha/docs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -100,7 +122,7 @@
       <updated>1695329141572</updated>
       <workItem from="1695329142696" duration="4839000" />
       <workItem from="1695649895763" duration="9025000" />
-      <workItem from="1695672866136" duration="1078000" />
+      <workItem from="1695672866136" duration="1548000" />
     </task>
     <servers />
   </component>

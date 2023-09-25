@@ -1,8 +1,3 @@
----
-title: API
----
-
-
 # Inside the Gluegun Toolbox
 
 Let's explore the inside of the famous Gluegun "Toolbox" (or "Context" as it's sometimes called).

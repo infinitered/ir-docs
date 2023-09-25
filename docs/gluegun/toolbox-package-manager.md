@@ -1,7 +1,3 @@
----
-title: Package Manager
----
-
 Provides an API for intelligently running commands in yarn or npm depending on which is installed.
 
 ## hasYarn

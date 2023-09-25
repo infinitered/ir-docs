@@ -1,7 +1,3 @@
----
-title: Config
----
-
 You can have your plugin authors configure the behavior of your CLI by providing a configuration file in the root of any plugin. You can also provide one in the root level of the main CLI.
 
 This is an object. Each plugin will have its own root level key.

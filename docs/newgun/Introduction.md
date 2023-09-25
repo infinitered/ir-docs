@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 # Gluegun
 
 ![gluegun](https://user-images.githubusercontent.com/1479215/50237287-5a23e380-0371-11e9-89ea-85b41cd25217.jpg)

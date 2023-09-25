@@ -1,6 +1,3 @@
----
-title: Prompt
----
 Prompt allows you to ask the user for input.
 
 You can access these tools on the Gluegun toolbox, via `const { prompt } = require('gluegun')`, or directly via `const { prompt } = require('gluegun/prompt')`.

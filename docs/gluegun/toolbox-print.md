@@ -1,6 +1,3 @@
----
-title: Print
----
 Features for allowing you to print to the console.
 
 You can access these tools on the Gluegun toolbox, via `const { print } = require('gluegun')`, or directly via `const { print } = require('gluegun/print')`.

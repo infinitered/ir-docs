@@ -1,6 +1,3 @@
----
-title: meta
----
 
 Provides functions for accessing information about the currently running CLI. You can access this on the Gluegun toolbox.
 
