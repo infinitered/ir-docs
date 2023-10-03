@@ -8,6 +8,11 @@ type FeatureItem = {
   description: JSX.Element;
 };
 
+const fs = require('fs');
+const path = require('path');
+
+const docsDirectory = path.join(__dirname, 'docs');
+const folders = fs.readdirSync(docsDirectory);
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',

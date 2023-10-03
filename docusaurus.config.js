@@ -17,8 +17,8 @@ const navbarItems = Object.keys(sidebars).map((sidebarId) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Infinite Red',
+  tagline: 'Open Source for React Native and more!',
   favicon: 'img/favicon.ico',
   trailingSlash: true,
 
@@ -33,8 +33,8 @@ const config = {
   organizationName: 'infinitered', // Usually your GitHub org/user name.
   projectName: 'ir-docs', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
