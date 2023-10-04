@@ -6,25 +6,7 @@
     width: 100%;
     justify-content: space-evenly;
 
-    & a:link {
-        text-decoration: none;
-        color: var(--ifm-color-black);
-    }
 
-    & a:active {
-        text-decoration: none;
-        color: var(--ifm-color-black);
-    }
-
-    & a:visited {
-        text-decoration: none;
-        color: var(--ifm-color-black);
-    }
-
-    & a:hover {
-        text-decoration: none;
-        color: var(--ifm-color-black);
-    }
 }
 
 .featureSvg {
@@ -41,6 +23,31 @@
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     overflow: hidden;
+}
+
+.features a {
+    color: var(--ifm-color-black);
+    font-weight: 500;
+}
+
+.features a:link {
+    text-decoration: none;
+    color: var(--ifm-color-black);
+}
+
+.features a:active {
+    text-decoration: none;
+    color: var(--ifm-color-black);
+}
+
+.features a:visited {
+    text-decoration: none;
+    color: var(--ifm-color-black);
+}
+
+.features a:hover {
+    text-decoration: none;
+    color: var(--ifm-color-black);
 }
 
 .featureHead {
@@ -80,10 +87,6 @@
     justify-content: center;
 }
 
-a {
-    color: var(--ifm-color-black);
-    font-weight: 500;
-}
 
 
 
