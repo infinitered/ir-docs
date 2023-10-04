@@ -14,12 +14,16 @@ module.exports = function (context, options) {
             console.log(sidebars)
             const sidebarDirs = Object.values(sidebars).map(sidebar => sidebar[0].dirName);
             console.log({sidebarDirs})
-
             const packages = sidebarDirs.map((dir) => {
                 console.log("adding sidebar: " + dir);
                 const folder = path.join(docsDirectory, dir)
-                if (fs.statSync(folder).isDirectory() && fs.statSync(path.join(folder, "_project_.json")).isFile()) {
-                    return require(path.join(folder, "_project_.json"));
+                if (fs.statSync(folder).isDirectory() && fs.statSync(path.join(folder, "_category_.json")).isFile()) {
+                    const category = require(path.join(folder, "_category_.json"));
+                    return {
+                        label: category.label,
+                        description: category.customProps.description,
+                        projectName: category.customProps.projectName,
+                    }
                 } else {
                     return null;
                 }
