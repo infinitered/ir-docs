@@ -27,19 +27,19 @@ export default function HomePageProjects() {
     const packages = context.globalData['custom-homepage-plugin'].default['packages'];
 
     return (<div className={"container"}><section className={styles.features}>
-        {packages.map((packageItem: any) => (<Link to={`/ir-docs/docs/${packageItem.dir}`} key={packageItem.dir}>
+        {packages.map((item: any) => (<Link to={`/ir-docs/docs/${item.projectName}`} key={item.projectName}>
             <div className={styles.feature}>
 
                 <div className={styles.featureHead}>
                     <div className={styles.logoContainer}>
                         <img src={"img/irMark--reversed@2x.png"} alt={"Infinite Red Logo"} className={styles.logo}/>
                     </div>
-                    <h2 className={styles.featureHeadText}>{packageItem.label}</h2>
+                    <h2 className={styles.featureHeadText}>{item.label}</h2>
                 </div>
                 <div className={styles.featureBody}>
 
                     <p className={styles.featureText}>
-                        {packageItem.description}
+                        {item.description}
                     </p>
                 </div>
             </div>
