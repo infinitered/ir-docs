@@ -43,6 +43,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  plugins: [
+    require.resolve('./plugins/homepage-items-plugin'),
+  ],
 
   presets: [
     [
@@ -70,6 +73,7 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
+        style: 'dark',
         items: [
             ...navbarItems,
           {
