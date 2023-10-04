@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkir_docs=self.webpackChunkir_docs||[]).push([[53],{1109:e=>{e.exports=JSON.parse('{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{},"docs":{"intro":{"id":"intro","title":"Placeholder","description":""}}}')}}]);
