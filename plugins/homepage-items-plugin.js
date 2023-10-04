@@ -19,12 +19,7 @@ module.exports = function (context, options) {
                 console.log("adding sidebar: " + dir);
                 const folder = path.join(docsDirectory, dir)
                 if (fs.statSync(folder).isDirectory() && fs.statSync(path.join(folder, "_project_.json")).isFile()) {
-                    const category = require(path.join(folder, "_project_.json"))
-                    return {
-                        label: category.label,
-                        dir,
-                        description: category.link.description,
-                    }
+                    return require(path.join(folder, "_project_.json"));
                 } else {
                     return null;
                 }
