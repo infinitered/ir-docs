@@ -1,12 +1,13 @@
 # ir-docs
 Unified Documentation for Infinite Red Open Source
 
-{% warning %}
-
-Edits to documentation for a particular project should be made in that project's repository!
-Changes will be automatically pushed to this repository by the CI/CD process.
-
-{% endwarning %}
+> ⚠️⚠️ **IMPORTANT NOTE** ⚠️⚠️
+>
+> DO NOT EDIT THE `./docs` DIRECTORY IN THIS REPOSITORY!
+> 
+> **Edits to documentation for a particular project should be made in that project's repository!**
+> 
+> Changes in source repos will be automatically pushed to this repository by the CI/CD process and may destructively overwrite any changes made here.
 
 ## Preparing you project for `ir-docs`
 
@@ -14,7 +15,7 @@ To prepare your project for `ir-docs` you'll need to do the following:
 
 1. Create a directory to hold the documentation in your project. We recommend `./docs`
 2. Add documentation to that directory.
-  * Use **docusaurus syntax** for your documentation
+  * Use **docusaurus syntax** for your documentation -- mostly markdown, some MDK is ok.
   * Only use **relative links** in your project's documentation.
   * Avoid defining slugs in your markdown files, unless absolutely necessary. (If you must use them, use your projects
     name as a prefix to avoid collisions.)
@@ -44,11 +45,7 @@ Imagine we have a repository that publishes docs to `ir-docs`. That repo is call
 
 ### How the orb works
 
-{%note%}
-
-This is a high-level summary. For full, up-to-date information on the orb and its parameters check the [orb registry](https://circleci.com/developer/orbs/orb/infinitered/publish-docs).
-
-{%endnote%}
+> This is a high-level summary. For full, up-to-date information on the orb and its parameters check the [orb registry](https://circleci.com/developer/orbs/orb/infinitered/publish-docs).
 
 Imagine we have a project `open-source-sesame` with the following config:
 
