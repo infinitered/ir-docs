@@ -186,6 +186,8 @@
     --ifm-color-emphasis-800: var(--ifm-color-gray-800);
     --ifm-color-emphasis-900: var(--ifm-color-gray-900);
     --ifm-color-emphasis-1000: var(--ifm-color-gray-1000);
+
+    --ifm-footer-link-color: var(--ifm-color-white);
 }
 
 html[data-theme='dark'] {
@@ -202,6 +204,8 @@ html[data-theme='dark'] {
     --ifm-color-danger-contrast-foreground: var(--ifm-color-white);
     --ifm-color-success-contrast-background: var(--ifm-color-success-dark);
     --ifm-color-success-contrast-foreground: var(--ifm-color-white);
+
+
 }
 
 [data-theme='dark'] :root {
@@ -341,5 +345,13 @@ html[data-theme='dark'] {
 
 .navbar__link--active {
     color: var(--ifm-color-primary);
+}
+
+.footer--dark {
+    --ifm-footer-link-hover-color: var(--ifm-color-primary);
+}
+
+.footer__link-item {
+    color: var(--ifm-color-gray-200);
 }
 
