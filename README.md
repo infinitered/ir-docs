@@ -15,10 +15,10 @@ To prepare your project for `ir-docs` you'll need to do the following:
 
 1. Create a directory to hold the documentation in your project. We recommend `./docs`
 2. Add documentation to that directory.
-  * Use **docusaurus syntax** for your documentation -- mostly markdown, some MDK is ok.
-  * Only use **relative links** in your project's documentation.
-  * Avoid defining slugs in your markdown files, unless absolutely necessary. (If you must use them, use your projects
-    name as a prefix to avoid collisions.)
+    * Use **docusaurus syntax** for your documentation -- mostly markdown, some MDK is ok.
+    * Only use **relative links** in your project's documentation.
+    * Avoid defining slugs in your markdown files, unless absolutely necessary. (If you must use them, use your projects
+      name as a prefix to avoid collisions.)
 3. Add the orb to your project's `.circleci/config.yml` file and call either the build or publish job from your
    workflow.
     * You need to add a `user key` to the CircleCI project settings. (Use the CI User Account.)
