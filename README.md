@@ -1,5 +1,10 @@
 # ir-docs
-Unified Documentation for Infinite Red Open Source
+
+**Unified documentation for Infinite Red open source projects.**
+
+ir-docs is a single instance of Docusaurus that fetches and builds the `/docs` folder from all of the major open source libraries under the `infinitered` organization and serves them up under `docs.infinite.red/<project>`.
+
+For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree/master/docs`. When new docs are pushed to `master`, Gluegun's Circle CI triggers a build action that then prompts ir-docs to publish those docs at `docs.infinite.red/gluegun`.
 
 > ⚠️⚠️ **IMPORTANT NOTE** ⚠️⚠️
 >
@@ -9,37 +14,37 @@ Unified Documentation for Infinite Red Open Source
 > 
 > Changes in source repos will be automatically pushed to this repository by the CI/CD process and may destructively overwrite any changes made here.
 
-## Preparing you project for `ir-docs`
+## Preparing your project for `ir-docs`
 
 To prepare your project for `ir-docs` you'll need to do the following:
 
 1. Create a directory to hold the documentation in your project. We recommend `./docs`
 2. Add documentation to that directory.
-    * Use **docusaurus syntax** for your documentation -- mostly markdown, some MDK is ok.
-    * Only use **relative links** in your project's documentation.
+    * Use **docusaurus syntax** for your documentation -- mostly Markdown, some [MDX](https://mdxjs.com/) is ok.
+    * Only use **relative links** in your project's documentation. For example: `../reference/filesystem.md` rather than the full URL or the basename `/reference/*`.
     * Avoid defining slugs in your markdown files, unless absolutely necessary. (If you must use them, use your projects
       name as a prefix to avoid collisions.)
 3. Add the orb to your project's `.circleci/config.yml` file and call either the build or publish job from your
    workflow.
     * You need to add a `user key` to the CircleCI project settings. (Use the CI User Account.)
            
-
 ## The Orb: `infinitered/publish-docs` 
 
 The `infinitered/publish-docs` orb is used to build and publish documentation for Infinite Red open source projects. 
 
 It is available in the [CircleCI Orb Registry](https://circleci.com/developer/orbs/orb/infinitered/publish-docs).
 
+See below for how to configure it on CircleCI. You will have to enable third-party orbs on your organization if you haven't yet. Go to `https://app.circleci.com/settings/organization/github/<yourorganization>/security` to do that.
 
 ### The ir-docs Publishing Process
 
-Imagine we have a repository that publishes docs to `ir-docs`. That repo is called `open-source-sesame`.
+Imagine we have a repository that publishes docs to `ir-docs`. That repo is called `open-source-sesame` and it uses `changesets` to manage releases.
 
 1. A contributor makes a change to the documentation in `open-source-sesame` and opens a PR.
-2. A maintainer approves the changes merges them into `main`.
-3. When it's time for a release, the maintainer creates a PR to bump the version number tags the commit `v1.2.3`
+2. A maintainer approves the changes and merges them into `main`.
+3. When it's time for a release, the maintainer creates a PR to bump the version number and tags the commit `v1.2.3`
 4. The CI script in `open-source-sesame` sees a tagged commit and runs using the `infinitered/publish-docs` orb.
-5. The orb copies the changed documentation from `open-source-sesame` into `ir-docs` commits and pushes a new commit.
+5. The orb automatically copies the changed documentation from `open-source-sesame` into `ir-docs` commits and pushes a new commit.
 6. The CI script in `ir-docs` rebuilds the new docusaurus site with the updated docs and pushes it to the `gh-pages` branch.
 7. Github publishes the changes to the web. 
 
