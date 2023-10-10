@@ -11,7 +11,6 @@ module.exports = function (context, options) {
             const {createData} = actions;
             const sidebars = require('../sidebars.js');
 
-            console.log(sidebars)
             const sidebarDirs = Object.values(sidebars).map(sidebar => sidebar[0].dirName);
             console.log({sidebarDirs})
             const packages = sidebarDirs.map((dir) => {

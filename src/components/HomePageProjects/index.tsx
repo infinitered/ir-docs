@@ -12,7 +12,7 @@ type FeatureItem = {
 function Feature({title, Svg, description}: FeatureItem) {
     return (<div className={clsx('col col--4')}>
         <div className="text--center">
-            <Svg className={styles.featureSvg} role="img"/>
+            <Svg className={styles.projectSvg} role="img"/>
         </div>
         <div className="text--center padding-horiz--md">
             <h3>{title}</h3>
@@ -26,19 +26,19 @@ export default function HomePageProjects() {
 
     const packages = context.globalData['custom-homepage-plugin'].default['packages'];
 
-    return (<div className={"container"}><section className={styles.features}>
+    return (<div className={"container"}><section className={styles.projects}>
         {packages.map((item: any) => (<Link to={`/ir-docs/docs/${item.projectName}`} key={item.projectName}>
-            <div className={styles.feature}>
+            <div className={styles.project}>
 
-                <div className={styles.featureHead}>
+                <div className={styles.projectHead}>
                     <div className={styles.logoContainer}>
                         <img src={"img/irMark--reversed@2x.png"} alt={"Infinite Red Logo"} className={styles.logo}/>
                     </div>
-                    <h2 className={styles.featureHeadText}>{item.label}</h2>
+                    <h2 className={styles.projectHeadText}>{item.label}</h2>
                 </div>
-                <div className={styles.featureBody}>
+                <div className={styles.projectBody}>
 
-                    <p className={styles.featureText}>
+                    <p className={styles.projectText}>
                         {item.description}
                     </p>
                 </div>
