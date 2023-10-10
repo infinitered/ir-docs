@@ -12,9 +12,7 @@ module.exports = function (context, options) {
             const sidebars = require('../sidebars.js');
 
             const sidebarDirs = Object.values(sidebars).map(sidebar => sidebar[0].dirName);
-            console.log({sidebarDirs})
             const packages = sidebarDirs.map((dir) => {
-                console.log("adding sidebar: " + dir);
                 const folder = path.join(docsDirectory, dir)
                 if (fs.statSync(folder).isDirectory() && fs.statSync(path.join(folder, "_category_.json")).isFile()) {
                     const category = require(path.join(folder, "_category_.json"));
