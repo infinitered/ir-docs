@@ -27,7 +27,11 @@
   border: 1px dashed white;
 }
 
-h1 {
+header h1 {
+  color: var(--ifm-color-white)
+}
+
+header p {
   color: var(--ifm-color-white)
 }
 
