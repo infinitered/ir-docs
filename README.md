@@ -38,7 +38,7 @@ See below for how to configure it on CircleCI. You will have to enable third-par
 
 ### The ir-docs Publishing Process
 
-Imagine we have a repository that publishes docs to `ir-docs`. That repo is called `open-source-sesame` and it uses `changesets` to manage releases.
+Imagine we have a repository that publishes docs to `ir-docs`. That repo is called `open-source-sesame`.
 
 1. A contributor makes a change to the documentation in `open-source-sesame` and opens a PR.
 2. A maintainer approves the changes and merges them into `main`.
