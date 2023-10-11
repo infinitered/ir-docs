@@ -27,7 +27,7 @@ export default function HomePageProjects() {
     const packages = context.globalData['custom-homepage-plugin'].default['packages'];
 
     return (<div className={"container"}><section className={styles.projects}>
-        {packages.map((item: any) => (<Link to={`/docs/${item.projectName}`} key={item.projectName}>
+        {packages.map((item: any) => (<Link to={`/${item.projectName}`} key={item.projectName}>
             <div className={styles.project}>
 
                 <div className={styles.projectHead}>
