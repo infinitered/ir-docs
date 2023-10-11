@@ -27,11 +27,11 @@
   border: 1px dashed white;
 }
 
-header h1 {
+.hero header h1 {
   color: var(--ifm-color-white)
 }
 
-header p {
+.hero header p {
   color: var(--ifm-color-white)
 }
 
