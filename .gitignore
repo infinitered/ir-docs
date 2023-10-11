@@ -369,3 +369,5 @@ fabric.properties
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/yarn,node,docusaurus,visualstudiocode,webstorm
+
+.DS_Store
