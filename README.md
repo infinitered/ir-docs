@@ -112,4 +112,10 @@ workflows:
     - Commit with the constructed message.
     - Push to the `main` branch of `git@github.com:infinitered/ir-docs.git`.
 
+## Previewing your Changes
 
+To preview your changes while you work:
+
+1. Clone the ir-docs repo.
+2. Create a simlink of your projects docs in the `docs` folder of the `ir-docs` repo.
+3. Run `yarn start` in the `ir-docs` repo.
