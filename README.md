@@ -18,7 +18,7 @@ For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree
 
 To see how your docs will look on `docs.infinite.red` before publishing them, you can preview locally using symlinks:
 
-1. Clone a copy of this repo
+1. Clone a copy of the `ir-docs` repo to your machine
 ```
 git clone git@github.com:infinitered/ir-docs.git ~/ir-docs
 ```
@@ -34,8 +34,9 @@ ln -s ~/my-project/docs ~/ir-docs/docs/my-project
 cd ~/ir-docs
 yarn start
 ```
+The preview should open automatically at `http://localhost:3000`
 
-Voila! Hot reloading!
+4. Edit your project's docs in place and the changes should hot reload in the browser!
 
 ## Preparing your project for `ir-docs`
 
