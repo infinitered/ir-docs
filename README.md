@@ -14,6 +14,29 @@ For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree
 > 
 > Changes in source repos will be automatically pushed to this repository by the CI/CD process and may destructively overwrite any changes made here.
 
+## Testing Docs Locally
+
+To see how your docs will look on `docs.infinite.red` before publishing them, you can preview locally using symlinks:
+
+1. Clone a copy of this repo
+```
+git clone git@github.com:infinitered/ir-docs.git ~/ir-docs
+```
+
+2. Symlink your project's docs folder into the `ir-docs/docs` folder.
+
+```
+ln -s ~/my-project/docs ~/ir-docs/docs/my-project
+```
+
+3, Run the docusaurus dev server
+```
+cd ~/ir-docs
+yarn start
+```
+
+Voila! Hot reloading!
+
 ## Preparing your project for `ir-docs`
 
 To prepare your project for `ir-docs` you'll need to do the following:
