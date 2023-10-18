@@ -44,7 +44,8 @@ const config = {
     locales: ['en'],
   },
   plugins: [
-    require.resolve('./plugins/homepage-items-plugin'),
+      require.resolve('./plugins/support-symlinks'),
+      require.resolve('./plugins/homepage-items-plugin'),
   ],
 
   presets: [

@@ -9,7 +9,7 @@ const sidebars = {};
 
 function fileExists(path) {
     try {
-        return fs.statSync(path).isFile();
+        return fs.lstatSync(path).isFile();
     } catch {
         return false;
     }
@@ -17,9 +17,11 @@ function fileExists(path) {
 
 projects.forEach((project) => {
     const docsDir = path.join(docsDirectory, project);
-    if (fs.statSync(docsDir).isDirectory()) {
-        const categoryFile = path.join(docsDir, "_category_.json");
-        if(fileExists(categoryFile)) {
+    const realPath = fs.lstatSync(docsDir).isSymbolicLink() ? fs.realpathSync(docsDir) : docsDir;
+
+    if (fs.statSync(realPath).isDirectory()) {
+        const categoryFile = path.join(realPath, "_category_.json");
+        if (fileExists(categoryFile)) {
             const category = require(categoryFile);
             sidebars[category.label] = [category.customProps.sidebar];
         } else {
