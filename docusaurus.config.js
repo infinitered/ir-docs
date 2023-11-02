@@ -80,7 +80,7 @@ const config = {
         items: [
             ...navbarItems,
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/infinitered/ir-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,16 +93,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Slack',
+                href: 'https://community.infinite.red',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Medium',
+                href: 'https://shift.infinite.red',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/infinite_red',
               },
             ],
           },
@@ -110,8 +110,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHub Organization',
+                href: 'https://github.com/infinitered/',
               },
               {
                 label: 'Infinite Red',
@@ -120,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Infinite Red, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
