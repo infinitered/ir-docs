@@ -8,7 +8,10 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--ifm-background-color);
 }
+
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -27,10 +30,19 @@
 }
 
 .hero header h1 {
+  color: var(--ifm-color-gray-700)
+}
+
+[data-theme="dark"] .hero header h1 {
   color: var(--ifm-color-white)
 }
 
 .hero header p {
+  color: var(--ifm-color-white)
+}
+
+.hero__title {
+  font-weight: 900;
   color: var(--ifm-color-white)
 }
 

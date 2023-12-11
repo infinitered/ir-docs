@@ -9,38 +9,32 @@ type FeatureItem = {
 };
 
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, description}: FeatureItem) {
     return (<div className={clsx('col col--4')}>
-        <div className="text--center">
-            <Svg className={styles.projectSvg} role="img"/>
-        </div>
         <div className="text--center padding-horiz--md">
             <h3>{title}</h3>
             <p>{description}</p>
+            <p>Check it out</p>
         </div>
     </div>);
 }
 
 export default function HomePageProjects() {
     const context = useDocusaurusContext();
-
     const packages = context.globalData['custom-homepage-plugin'].default['packages'];
+    console.log(packages.map(pkg => pkg.projectName))
 
     return (<div className={"container"}><section className={styles.projects}>
         {packages.map((item: any) => (<Link to={`/${item.projectName}`} key={item.projectName}>
             <div className={styles.project}>
-
                 <div className={styles.projectHead}>
-                    <div className={styles.logoContainer}>
-                        <img src={"img/irMark--reversed@2x.png"} alt={"Infinite Red Logo"} className={styles.logo}/>
-                    </div>
                     <h2 className={styles.projectHeadText}>{item.label}</h2>
                 </div>
                 <div className={styles.projectBody}>
-
                     <p className={styles.projectText}>
                         {item.description}
                     </p>
+                    <p className={styles.callToAction}>Check it out</p>
                 </div>
             </div>
         </Link>))}

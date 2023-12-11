@@ -17,7 +17,7 @@ const navbarItems = Object.keys(sidebars).map((sidebarId) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Open Source @ Infinite Red',
+  title: 'Open Source at Infinite Red',
   tagline: 'Tools to supercharge your React Native development!',
   favicon: 'img/favicon.ico',
   trailingSlash: true,

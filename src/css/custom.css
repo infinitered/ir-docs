@@ -90,9 +90,9 @@
 
     /* INFIMA THEME VARS*/
 
-    --ifm-background-color: #ffffff;
-    --ifm-surface-background-color: #f8f7f7;
-    --ifm-card-background-color: #ffffff;
+    --ifm-background-color: var(--ir-background-dim);
+    --ifm-surface-background-color:var(--ifm-color-white);
+    --ifm-card-background-color: var(--ifm-color-white);
 
     --ifm-color-primary: var(--ir-brand-500);
     --ifm-color-primary-dark: var(--ir-brand-600);
@@ -349,9 +349,38 @@ html[data-theme='dark'] {
 
 .footer--dark {
     --ifm-footer-link-hover-color: var(--ifm-color-primary);
+    background: var(--ifm-color-gray-800);
+}
+
+[data-theme="dark"] .footer--dark {
+    --ifm-footer-link-hover-color: var(--ifm-color-primary);
+    background: var(--ifm-color-gray-700);
 }
 
 .footer__link-item {
     color: var(--ifm-color-gray-200);
 }
 
+
+.hero--primary {
+    background: var(--ifm-color-gray-0);
+}
+.hero__title {
+    color: var(--ifm-color-black)
+}
+
+.hero__subtitle {
+    color: var(--ifm-color-black)
+}
+
+[data-theme="dark"] .hero__title {
+    color: var(--ifm-color-white)
+}
+
+[data-theme="dark"] .hero__subtitle {
+    color: var(--ifm-color-white)
+}
+
+body {
+    font-family: "Montserrat (compressed)", Trebuchet MS, sans-serif
+}
