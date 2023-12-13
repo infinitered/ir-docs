@@ -2,7 +2,37 @@ const fs = require('fs');
 const path = require('path');
 
 const docsDirectory = path.join(__dirname, 'docs');
-const projects = fs.readdirSync(docsDirectory);
+let projects = fs.readdirSync(docsDirectory);
+
+// Edit this object to set the order of projects.
+//  - Keys should be the same as the name of the folder
+//  - Lower numbers go first.
+//  - Projects not listed will be added alphabetically at the end.
+const ordering = {
+    "ignite-cli": 10,
+    "reactotron":20,
+    "nsfw-js":30,
+    "apisauce": 40,
+    "react-native-mlkit":50,
+    "gluegun":60,
+    "solidarity":70,
+};
+
+// Sort projects based on the ordering object
+projects = projects.sort((a, b) => {
+    const orderA = ordering[a];
+    const orderB = ordering[b];
+
+    if (orderA !== undefined && orderB !== undefined) {
+        return orderA - orderB;
+    } else if (orderA !== undefined) {
+        return 1;
+    } else if (orderB !== undefined) {
+        return -1;
+    } else {
+        return a.localeCompare(b); // Alphabetical order for projects not in the ordering object
+    }
+});
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {};
