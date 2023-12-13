@@ -1,10 +1,9 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  margin-left: -1rem;
-  margin-top: -1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* This adds space between the grid items */
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .projectSvg {
@@ -13,69 +12,73 @@
 }
 
 .projects .project {
-  flex: 1 0 200px;
   box-sizing: border-box;
-  background: #e0ddd5;
-  color: #171e42;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  width: 350px;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  background: var(--ifm-card-background-color);
+  color: var(--ifm-color-gray-700);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
   overflow: hidden;
+  height: 14rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+[data-theme="dark"] .projects .project {
+  background: var(--ifm-card-background-color);
+  box-shadow: rgba(99,99,99, 0.07) 0 1px 2px, rgba(99,99,99, 0.07) 0 2px 4px, rgba(99,99,99, 0.07) 0 4px 8px, rgba(99,99,99, 0.07) 0 8px 16px, rgba(99,99,99, 0.07) 0 16px 32px, rgba(99,99,99, 0.07) 0 32px 64px;
 }
 
 .projects a {
-  color: var(--ifm-color-black);
+  color: var(--ifm-color-gray-700);
   font-weight: 500;
+  text-decoration: none; /* No need to repeat this for every state */
 }
 
+
 .projects a:link {
-  text-decoration: none;
-  color: var(--ifm-color-black);
+  color: var(--ifm-color-gray-700);
 }
 
 .projects a:active {
-  text-decoration: none;
-  color: var(--ifm-color-black);
+  color: var(--ifm-color-gray-700);
 }
 
 .projects a:visited {
-  text-decoration: none;
-  color: var(--ifm-color-black);
+  color: var(--ifm-color-gray-700);
 }
 
 .projects a:hover {
-  text-decoration: none;
-  color: var(--ifm-color-black);
+  color: var(--ifm-color-gray-700);
 }
 
 .projectHead {
-  background-color: var(--ifm-color-secondary);
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 1rem;
+  align-items: flex-start;
 }
 
 .projectHeadText {
-  color: var(--ifm-color-white);
-  font-size: 1.8rem;
+  font-size: 1.6em; /* Adjusted size */
   font-weight: 600;
   text-align: left;
   flex-grow: 1;
   margin: 0;
-  padding-left: 1rem;
+
+}
+
+[data-theme="dark"] .projectHeadText {
+  color: var(--ifm-color-white)
 }
 
 .projectText {
   width: 100%;
   text-align: left;
-  font-size: 1.1rem;
-  margin: 1rem;
-  padding-left: 1rem;
-  color: var(--ifm-color-secondary-contrast-foreground);
+  font-size: 1rem;
+  margin-top: 1rem;
+  height: 5rem;
 }
 
 .projectBody {
@@ -83,10 +86,12 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  border: 1px solid var(--ifm-color-emphasis-100);
-  align-items: center;
-  justify-content: center;
-  background-color: var(--ifm-color-secondary-contrast-background);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+[data-theme="dark"] .projectBody {
+    color: var(--ifm-color-gray-100)
 }
 
 .logo {
@@ -98,4 +103,10 @@
   width: 50px;
   height: 50px;
   min-width: 50px;
+}
+
+
+.callToAction {
+  color: var(--ifm-color-primary);
+  flex-grow: 1;
 }
