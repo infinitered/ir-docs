@@ -143,3 +143,35 @@ To preview your changes while you work:
 1. Clone the ir-docs repo.
 2. Create a simlink of your projects docs in the `docs` folder of the `ir-docs` repo.
 3. Run `yarn start` in the `ir-docs` repo.
+
+## Handling Static Files
+In your source repository, static files such as images should be placed in a directory named _static_ under your docs folder. The directory structure will look like this when you run the tree command:
+
+docs/
+├── part-one.md
+├── part-two.md
+└── _static_
+└── image.png
+During the documentation merge process, the orb will automatically move the contents of _static_ to the appropriate location in the target repository.
+
+Directory Structure Before and After Merge
+Before Merge:
+
+source-repo/
+└── docs/
+│ ├── part-one.md
+│ └── part-two.md
+└── _static_/
+    └── image.png
+After Merge:
+
+ir-docs/
+├── docs/
+│ └── <<project-name>>
+│ ├── part-one.md
+│ └── part-two.md
+└── static/
+    └── <<project-name>>
+    └── image.png
+    
+By following this convention, you ensure that all static files and documents are correctly placed in the target repository, under docs/<<project-name>> for documents and static/<<project-name>> for static files.
