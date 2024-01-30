@@ -44,8 +44,8 @@ const config = {
     locales: ['en'],
   },
   plugins: [
-      require.resolve('./plugins/support-symlinks'),
-      require.resolve('./plugins/homepage-items-plugin'),
+    require.resolve('./plugins/support-symlinks'),
+    require.resolve('./plugins/homepage-items-plugin'),
   ],
 
   presets: [
@@ -56,10 +56,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-H431N07LX7',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -78,7 +81,7 @@ const config = {
         },
         style: 'dark',
         items: [
-            ...navbarItems,
+          ...navbarItems,
           {
             href: 'https://github.com/infinitered/ir-docs',
             label: 'GitHub',
@@ -116,6 +119,10 @@ const config = {
               {
                 label: 'Infinite Red',
                 href: 'https://www.infinite.red',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https:/infinite.red/privacy-policy',
               },
             ],
           },
