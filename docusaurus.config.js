@@ -122,7 +122,7 @@ const config = {
               },
               {
                 label: 'Privacy Policy',
-                href: 'https:/infinite.red/privacy-policy',
+                href: 'https://infinite.red/privacy-policy',
               },
             ],
           },
