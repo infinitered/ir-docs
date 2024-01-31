@@ -95,8 +95,8 @@ if [ "$ACTION" = "add" ]; then
     if [ -d "$TARGET" ]; then
         # Backup the existing directory by moving it
         echo "$(tput setaf 3)Saving backup of existing directory in $BACKUP_DOCS_DIR$(tput sgr 0)"
-        mkdir -p "$BACKUP_DOCS_DIR"
-        mv "$TARGET" "$BACKUP_DOCS_DIR"
+        mkdir -p "$BACKUP_DIR/docs"
+        mv "$TARGET" "$BACKUP_DIR/docs"
     fi
 
     if [ -d "$TARGET_STATIC" ]; then
@@ -141,13 +141,14 @@ elif [ "$ACTION" = "remove" ]; then
     rm -r "$TARGET"
     rm -r "$TARGET_STATIC"
 
-    # If a backup exists
+    # If backup docs exist
     if [ -d "$BACKUP_DOCS_DIR" ]; then
         # Restore the directory
         echo "$(tput setaf 3)Restoring docs backup...$(tput sgr 0)"
-        mv "$BACKUP_DOCS_DIR/$PROJECT_NAME" "$DOCS_DIR"
+        mv "$BACKUP_DOCS_DIR" "$DOCS_DIR"
     fi
 
+    # If backup static files exist
     if [ -d "$BACKUP_STATIC_DIR" ]; then
         # Restore the static files
         echo "$(tput setaf 3)Restoring static backup...$(tput sgr 0)"
