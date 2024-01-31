@@ -94,10 +94,10 @@ if [ "$ACTION" = "add" ]; then
 
     # If a directory already exists at the target
     if [ -d "$TARGET" ]; then
-        # Backup the existing directory by moving it
-        echo "$(tput setaf 3)Saving backup of existing directory in $BACKUP_DOCS_DIR$(tput sgr 0)"
-        mkdir -p "$BACKUP_DIR/docs"
-        mv "$TARGET" "$BACKUP_DIR/docs"
+      # Backup the existing directory by moving it
+      echo "$(tput setaf 3)Saving backup of existing directory in $BACKUP_DOCS_DIR/$(tput sgr 0)"
+      mkdir -p "$BACKUP_DOCS_DIR"
+      mv "$TARGET" "$BACKUP_DOCS_DIR"
     fi
 
     if [ -d "$TARGET_STATIC" ]; then
