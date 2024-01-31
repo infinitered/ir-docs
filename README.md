@@ -6,8 +6,7 @@ ir-docs is a single instance of Docusaurus that fetches and builds the `/docs` f
 
 For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree/master/docs`. When new docs are pushed to `master`, Gluegun's Circle CI triggers a build action that then prompts ir-docs to publish those docs at `docs.infinite.red/gluegun`.
 
-> ⚠️⚠️ **IMPORTANT NOTE** ⚠️⚠️
->
+> [!Caution]
 > DO NOT EDIT THE `./docs` DIRECTORY IN THIS REPOSITORY!
 > 
 > **Edits to documentation for a particular project should be made in that project's repository!**
@@ -23,20 +22,36 @@ To see how your docs will look on `docs.infinite.red` before publishing them, yo
 git clone git@github.com:infinitered/ir-docs.git ~/ir-docs
 ```
 
-2. Symlink your project's docs folder into the `ir-docs/docs` folder.
+2. Use the symlink script to link your projects docs folder into the `ir-docs/docs` folder.
 
+```bash
+yarn symlink add [project_name] [path_to_directory]
 ```
-ln -s ~/my-project/docs ~/ir-docs/docs/my-project
-```
+
+For instance to link the ignite docs you might do `yarn symlink add ignite-cli ../ignite/docs`.
+
+This will:
+   1. Backup the contents of `./docs/ignite-cli` to `./tmp/symlink/ignite-cli`
+   2. Create a symlink at `./docs/ignite-cli` that points to `../ignite/docs`
+   3. Create a `_category.json_` file in `./docs/ignite-cli` with the correct project name 
+
+> [!Note]
+> Remember not to commit any changes to the `./docs` folder manually.
 
 3, Run the docusaurus dev server
-```
-cd ~/ir-docs
-yarn start
-```
-The preview should open automatically at `http://localhost:3000`
+   ```
+   cd ~/ir-docs
+   yarn start
+   ```
+   The preview should open automatically at `http://localhost:3000`
 
 4. Edit your project's docs in place and the changes should hot reload in the browser!
+
+5. Restore the original folder
+    You can use the restore script to remove the symlink and restore the original files:
+    ```shell
+      yarn symlink remove [project-name]
+    ```
 
 ## Preparing your project for `ir-docs`
 

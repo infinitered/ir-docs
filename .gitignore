@@ -1,6 +1,11 @@
 # Created by https://www.toptal.com/developers/gitignore/api/yarn,node,docusaurus,visualstudiocode,webstorm
 # Edit at https://www.toptal.com/developers/gitignore?templates=yarn,node,docusaurus,visualstudiocode,webstorm
 
+### ir-docs ###
+
+# symlink backup directory
+tmp/symlink/**/*
+
 ### Docusaurus ###
 # Docusaurus cache and generated files
 .docusaurus
@@ -371,3 +376,5 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/yarn,node,docusaurus,visualstudiocode,webstorm
 
 .DS_Store
+/.idea/git_toolbox_prj.xml
+/.idea/vcs.xml
