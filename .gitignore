@@ -376,3 +376,5 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/yarn,node,docusaurus,visualstudiocode,webstorm
 
 .DS_Store
+/.idea/git_toolbox_prj.xml
+/.idea/vcs.xml

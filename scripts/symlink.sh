@@ -39,11 +39,13 @@
 
           PROJECT_NAME=$2
           DIR=$3
-          TARGET="./docs/$PROJECT_NAME"
-          BACKUP_DIR="./tmp/symlink/$PROJECT_NAME"
+          DOCS_DIR="./docs"
+          TARGET="$DOCS_DIR/$PROJECT_NAME"
+          BACKUP_DIR="./tmp/symlink"
 
           # Get the absolute path of the directory
-          ABSOLUTE_DIR=$(realpath "$DIR")
+          ABSOLUTE_SOURCE_DIR=$(realpath "$DIR")
+          echo "Debug: Checking if this is a symlink: $TARGET"
 
           # Check if target already is a symlink
           if [ -h $TARGET ]; then
@@ -53,15 +55,15 @@
 
           # If a directory already exists at the destination
           if [ -d "$TARGET" ]; then
-              # Backup the existing directory
+              # Backup the existing directory by moving it
               echo "$(tput setaf 3)Saving backup of existing directory in $BACKUP_DIR$(tput sgr 0)"
               mkdir -p "$BACKUP_DIR"
-              cp -r "$TARGET" "$BACKUP_DIR"
+              mv "$TARGET" "$BACKUP_DIR"
           fi
 
           # Create symlink
           echo "$(tput setaf 3)Creating symlink...$(tput sgr 0)"
-          ln -s "$ABSOLUTE_DIR" "$TARGET"
+          ln -s "$ABSOLUTE_SOURCE_DIR" "$TARGET"
 
           # Call function to create _category_.json
           CreateCategoryJSON "$PROJECT_NAME"
@@ -74,8 +76,9 @@
           fi
 
           PROJECT_NAME=$2
-          TARGET="./docs/$PROJECT_NAME"
-          BACKUP_DIR="./tmp/symlink/$PROJECT_NAME"
+          DOCS_DIR="./docs"
+          TARGET="$DOCS_DIR/$PROJECT_NAME"
+          BACKUP_DIR="./tmp/symlink"
 
           if [ ! -L $TARGET ]; then
               echo "$(tput setaf 3)$TARGET is not a symlink. Aborting...$(tput sgr 0)"
@@ -90,7 +93,7 @@
           if [ -d "$BACKUP_DIR" ]; then
               # Restore the directory
               echo "$(tput setaf 3)Restoring backup...$(tput sgr 0)"
-              mv "$BACKUP_DIR" "$TARGET"
+              mv "$BACKUP_DIR/$PROJECT_NAME" "$DOCS_DIR"
           fi
 
           echo "$(tput setaf 2)Changes have been undone.$(tput sgr 0)"
