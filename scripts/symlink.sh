@@ -146,6 +146,11 @@ elif [ "$ACTION" = "remove" ]; then
         # Restore the directory
         echo "$(tput setaf 3)Restoring docs backup...$(tput sgr 0)"
         mv "$BACKUP_DOCS_DIR" "$DOCS_DIR"
+
+         # Check if the backup directory is empty and remove it if so
+            if [ -z "$(ls -A -- "$BACKUP_DOCS_DIR")" ]; then
+                rmdir "$BACKUP_DOCS_DIR"
+            fi
     fi
 
     # If backup static files exist
@@ -153,6 +158,11 @@ elif [ "$ACTION" = "remove" ]; then
         # Restore the static files
         echo "$(tput setaf 3)Restoring static backup...$(tput sgr 0)"
         mv "$BACKUP_STATIC_DIR/$PROJECT_NAME" "$STATIC_DIR"
+
+         # Check if the backup directory is empty and remove it if so
+            if [ -z "$(ls -A -- "$BACKUP_STATIC_DIR")" ]; then
+                rmdir "$BACKUP_STATIC_DIR"
+            fi
     fi
 
     echo "$(tput setaf 2)Changes have been undone.$(tput sgr 0)"
