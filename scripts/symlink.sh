@@ -73,7 +73,7 @@ if [ "$ACTION" = "add" ]; then
     fi
 
     PROJECT_NAME=$2
-    DIR=$3
+    SOURCE_DIR=$3
     DOCS_DIR="$PWD/docs"
     TARGET="$DOCS_DIR/$PROJECT_NAME"
     STATIC_DIR="$PWD/static"
@@ -83,11 +83,12 @@ if [ "$ACTION" = "add" ]; then
     BACKUP_STATIC_DIR="$BACKUP_DIR/static"
 
     # Get the absolute path of the directory
-    ABSOLUTE_SOURCE_DIR=$(realpath "$DIR")
+    ABSOLUTE_SOURCE_DIR=$(realpath "$SOURCE_DIR")
+    SOURCE_STATIC_DIR="$ABSOLUTE_SOURCE_DIR/_static_"
 
     # Check if target already is a symlink
-    if [ -h $TARGET ] || [ -h $TARGET_STATIC ]; then
-        echo "$(tput setaf 3)$TARGET or $TARGET_STATIC is already a symlink. Aborting...$(tput sgr 0)"
+    if [ -h $TARGET ]; then
+        echo "$(tput setaf 3)$TARGET is already a symlink. Aborting...$(tput sgr 0)"
         exit 1
     fi
 
@@ -107,9 +108,14 @@ if [ "$ACTION" = "add" ]; then
     fi
 
     # Create symlink
-    echo "$(tput setaf 3)Creating symlink...$(tput sgr 0)"
+    echo "$(tput setaf 3)Creating symlink... $TARGET --> $ABSOLUTE_SOURCE_DIR $(tput sgr 0)"
     ln -s "$ABSOLUTE_SOURCE_DIR" "$TARGET"
-    ln -s "$ABSOLUTE_SOURCE_DIR/_static_" "$TARGET_STATIC"
+    if [ -d "$SOURCE_STATIC_DIR" ]; then
+      echo "$(tput setaf 3)Creating symlink... $TARGET_STATIC --> $ABSOLUTE_SOURCE_DIR/_static_ $(tput sgr 0)"
+      ln -s "$SOURCE_STATIC_DIR" "$TARGET_STATIC"
+    else
+      echo "No static files in $SOURCE_STATIC_DIR"
+    fi
 
     # Call function to create _category_.json
     CreateCategoryJSON "$PROJECT_NAME"
@@ -128,24 +134,27 @@ elif [ "$ACTION" = "remove" ]; then
     STATIC_DIR="./static"
     TARGET_STATIC="$STATIC_DIR/$PROJECT_NAME"
     BACKUP_DIR="./tmp/symlink"
-    BACKUP_DOCS_DIR="$BACKUP_DIR/docs/$PROJECT_NAME"
-    BACKUP_STATIC_DIR="$BACKUP_DIR/static/$PROJECT_NAME"
+    BACKUP_DOCS_DIR="$BACKUP_DIR/docs"
+    BACKUP_STATIC_DIR="$BACKUP_DIR/static"
 
-    if [ ! -L $TARGET ] || [ ! -L $TARGET_STATIC ]; then
-        echo "$(tput setaf 3)$TARGET or $TARGET_STATIC is not a symlink. Aborting...$(tput sgr 0)"
+    if [ ! -L $TARGET ]; then
+        echo "$(tput setaf 3)$TARGET is not a symlink. Aborting...$(tput sgr 0)"
         exit 1
     fi
 
     # Remove symlink
     echo "$(tput setaf 3)Removing symlinks...$(tput sgr 0)"
     rm -r "$TARGET"
+
+    if [ -L $TARGET_STATIC ]; then
     rm -r "$TARGET_STATIC"
+    fi
 
     # If backup docs exist
-    if [ -d "$BACKUP_DOCS_DIR" ]; then
+    if [ -d "$BACKUP_DOCS_DIR/$PROJECT_NAME" ]; then
         # Restore the directory
         echo "$(tput setaf 3)Restoring docs backup...$(tput sgr 0)"
-        mv "$BACKUP_DOCS_DIR" "$DOCS_DIR"
+        mv "$BACKUP_DOCS_DIR/$PROJECT_NAME" "$DOCS_DIR"
 
          # Check if the backup directory is empty and remove it if so
             if [ -z "$(ls -A -- "$BACKUP_DOCS_DIR")" ]; then
@@ -154,7 +163,7 @@ elif [ "$ACTION" = "remove" ]; then
     fi
 
     # If backup static files exist
-    if [ -d "$BACKUP_STATIC_DIR" ]; then
+    if [ -d "$BACKUP_STATIC_DIR/$PROJECT_NAME" ]; then
         # Restore the static files
         echo "$(tput setaf 3)Restoring static backup...$(tput sgr 0)"
         mv "$BACKUP_STATIC_DIR/$PROJECT_NAME" "$STATIC_DIR"
@@ -163,6 +172,14 @@ elif [ "$ACTION" = "remove" ]; then
             if [ -z "$(ls -A -- "$BACKUP_STATIC_DIR")" ]; then
                 rmdir "$BACKUP_STATIC_DIR"
             fi
+    fi
+
+    if [ -z "$(ls -A -- "$BACKUP_DIR")" ]; then
+        rmdir "$BACKUP_DIR"
+    fi
+
+    if [ -z "$(ls -A -- "tmp")" ]; then
+            rmdir "tmp"
     fi
 
     echo "$(tput setaf 2)Changes have been undone.$(tput sgr 0)"
