@@ -30,6 +30,21 @@
 
       ACTION=$1
 
+      if [ -z "$ACTION" ] || [ "$ACTION" = "--help" ]; then
+          echo -e "$(tput setaf 4)IR-DOCS SYMLINKING TOOL$(tput sgr 0)\n"\
+          "Creates and removes symlinks for local testing\n\n"\
+          "$(tput setaf 1)USAGE:$(tput sgr 0)\n"\
+          "    To create a symlink:\n"\
+          "    $(tput bold)$(tput setaf 3)yarn symlink add [project_name] [path_to_directory]$(tput sgr 0)\n"\
+          "    This will create a symlink at ./docs/[project_name] that points to [path_to_directory].\n"\
+          "    The existing directory at ./docs/[project_name] will be moved to $(tput setaf 3)tmp/symlink/[project_name]$(tput sgr 0).\n"\
+          "    In addition, a $(tput setaf 3)_category_.json$(tput sgr 0) file will be created in the ./docs/[project_name] directory.\n\n"\
+          "    To remove a symlink:\n"\
+          "    $(tput bold)$(tput setaf 3)yarn symlink remove [project_name]$(tput sgr 0)\n"\
+          "    This removes the symlink and restores the backup at tmp/symlink/[project_name], if available."
+          exit 0
+      fi
+
       if [ "$ACTION" = "add" ]; then
           # Ensure two arguments are provided
           if [ "$#" -ne 3 ]; then
