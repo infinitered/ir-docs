@@ -222,7 +222,8 @@ For all of this to work, the circle CI user account needs to have:
  * **READ** access to the Source Repo (e.g. `ignite`, `reactotron`, etc.), AND
  * **WRITE** access to `ir-docs`
 
-> [!Note] If you see errors related to credentials, it's likely that one of these permissions has expired.
+> [!Note] 
+> If you see errors related to credentials, it's likely that one of these permissions has expired.
 
 > [!Hint]
 > * If a `pull` fails then it's probably the source repo that needs to be re-authed.
@@ -239,9 +240,11 @@ For all of this to work, the circle CI user account needs to have:
 5. Open the `Collaborations & Teams` page
 6. Check that the CircleCI bot has write access to the `ir-docs` repo
                                                                                           
-> [!Note] The source repo may have other CI tasks that require the bot to have a higher level of access. Please verify the requirements before making changes.
+> [!Note] 
+> The source repo may have other CI tasks that require the bot to have a higher level of access. Please verify the requirements before making changes.
 
-> [!Hint] At the time of writing, the circleCI bot appears as `Infinite Red CircleCI User`
+> [!Hint] 
+> At the time of writing, the circleCI bot appears as `Infinite Red CircleCI User`
 
 ### B. Re-Authing the CircleCI bot
 
