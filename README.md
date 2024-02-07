@@ -225,7 +225,7 @@ For all of this to work, the circle CI user account needs to have:
 > [!Note] 
 > If you see errors related to credentials, it's likely that one of these permissions has expired.
 
-> [!Hint]
+> [!Tip]
 > * If a `pull` fails then it's probably the source repo that needs to be re-authed.
 > * If a `push` fails then it's probably `ir-docs` that needs to be re-authed.
             
@@ -243,7 +243,7 @@ For all of this to work, the circle CI user account needs to have:
 > [!Note] 
 > The source repo may have other CI tasks that require the bot to have a higher level of access. Please verify the requirements before making changes.
 
-> [!Hint] 
+> [!Tip] 
 > At the time of writing, the circleCI bot appears as `Infinite Red CircleCI User`
 
 ### B. Re-Authing the CircleCI bot
