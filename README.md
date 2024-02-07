@@ -37,7 +37,7 @@ For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree
 To see how your docs will look on `docs.infinite.red` before publishing them, you can preview locally using symlinks:
 
 1. Clone a copy of the `ir-docs` repo to your machine
-```
+```bash
 git clone git@github.com:infinitered/ir-docs.git ~/ir-docs
 ```
 
@@ -58,7 +58,7 @@ This will:
 > Remember not to commit any changes to the `./docs` folder manually.
 
 3, Run the docusaurus dev server
-   ```
+   ```bash
    cd ~/ir-docs
    yarn start
    ```
@@ -68,7 +68,7 @@ This will:
 
 5. Restore the original folder
     You can use the restore script to remove the symlink and restore the original files:
-    ```shell
+    ```bash
       yarn symlink remove [project-name]
     ```
 
