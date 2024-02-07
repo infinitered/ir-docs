@@ -12,13 +12,32 @@ For example, Gluegun's docs live at `https://github.com/infinitered/gluegun/tree
 > **Edits to documentation for a particular project should be made in that project's repository!**
 > 
 > Changes in source repos will be automatically pushed to this repository by the CI/CD process and may destructively overwrite any changes made here.
+             
+## Table of Contents
+<!-- TOC -->
+* [ir-docs](#ir-docs)
+  * [Table of Contents](#table-of-contents)
+  * [Testing Docs Locally](#testing-docs-locally)
+  * [Preparing your project for `ir-docs`](#preparing-your-project-for-ir-docs)
+  * [The Orb: `infinitered/publish-docs`](#the-orb-infiniteredpublish-docs-)
+    * [The ir-docs Publishing Process](#the-ir-docs-publishing-process)
+    * [How the orb works](#how-the-orb-works)
+  * [Previewing your Changes](#previewing-your-changes)
+  * [Handling Static Files](#handling-static-files)
+    * [Directory Structure Before and After Merge](#directory-structure-before-and-after-merge)
+      * [Before Merge:](#before-merge)
+      * [After Merge:](#after-merge)
+  * [Refreshing the credentials for the CircleCI User](#refreshing-the-credentials-for-the-circleci-user)
+    * [A. Checking permissions for the CircleCI bot:](#a-checking-permissions-for-the-circleci-bot)
+    * [B. Re-Authing the CircleCI bot](#b-re-authing-the-circleci-bot)
+<!-- TOC -->
 
 ## Testing Docs Locally
 
 To see how your docs will look on `docs.infinite.red` before publishing them, you can preview locally using symlinks:
 
 1. Clone a copy of the `ir-docs` repo to your machine
-```
+```bash
 git clone git@github.com:infinitered/ir-docs.git ~/ir-docs
 ```
 
@@ -39,7 +58,7 @@ This will:
 > Remember not to commit any changes to the `./docs` folder manually.
 
 3, Run the docusaurus dev server
-   ```
+   ```bash
    cd ~/ir-docs
    yarn start
    ```
@@ -49,7 +68,7 @@ This will:
 
 5. Restore the original folder
     You can use the restore script to remove the symlink and restore the original files:
-    ```shell
+    ```bash
       yarn symlink remove [project-name]
     ```
 
@@ -196,3 +215,47 @@ ir-docs/
 ```
     
 By following this convention, you ensure that all static files and documents are correctly placed in the target repository, under docs/<<project-name>> for documents and static/<<project-name>> for static files.
+
+## Refreshing the credentials for the CircleCI User
+
+For all of this to work, the circle CI user account needs to have:
+ * **READ** access to the Source Repo (e.g. `ignite`, `reactotron`, etc.), AND
+ * **WRITE** access to `ir-docs`
+
+> [!Note] 
+> If you see errors related to credentials, it's likely that one of these permissions has expired.
+
+> [!Tip]
+> * If a `pull` fails then it's probably the source repo that needs to be re-authed.
+> * If a `push` fails then it's probably `ir-docs` that needs to be re-authed.
+            
+
+### A. Checking permissions for the CircleCI bot:
+1. Browse to the settings page for the repo that has the issue
+2. Open the `Collaborations & Teams` page
+3. Under `Manage Access` check that the Circle CI Bot has the correct role:
+   * Source repo: _at least_ `Read` 
+   * `ir-docs`: `Write` 
+4. Browse to the settings page for the `ir-docs` repo
+5. Open the `Collaborations & Teams` page
+6. Check that the CircleCI bot has write access to the `ir-docs` repo
+                                                                                          
+> [!Note] 
+> The source repo may have other CI tasks that require the bot to have a higher level of access. Please verify the requirements before making changes.
+
+> [!Tip] 
+> At the time of writing, the circleCI bot appears as `Infinite Red CircleCI User`
+
+### B. Re-Authing the CircleCI bot
+
+1. (optional) Open an incognito tab
+2. Sign in to circle CI using Github authentication
+    * use the ci@infinite.red user account (password in the IR 1Password vault)
+3. Browse to the ignite project and open project settings
+4. Under “SSH keys” delete the “User Key”
+5. Add a new user key (will add the ci@infinite.red credential to the project)
+    * You will be asked to re-auth here — use the ci@infinite.red credentials
+    * After you sign in It’ll kick you back to the top of the menu
+    * Browse back to `SSH keys -> Add user` key and click the button again
+6. Congratulations, you have completed the task! 🍾🎉 
+   
