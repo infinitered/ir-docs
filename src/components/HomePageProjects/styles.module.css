@@ -15,10 +15,11 @@
   box-sizing: border-box;
   background: var(--ifm-card-background-color);
   color: var(--ifm-color-gray-700);
-  box-shadow: rgba(0, 0, 0, 0.25) 0 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
   overflow: hidden;
   height: 14rem;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -27,7 +28,9 @@
 
 [data-theme="dark"] .projects .project {
   background: var(--ifm-card-background-color);
-  box-shadow: rgba(99,99,99, 0.07) 0 1px 2px, rgba(99,99,99, 0.07) 0 2px 4px, rgba(99,99,99, 0.07) 0 4px 8px, rgba(99,99,99, 0.07) 0 8px 16px, rgba(99,99,99, 0.07) 0 16px 32px, rgba(99,99,99, 0.07) 0 32px 64px;
+  box-shadow: rgba(99, 99, 99, 0.07) 0 1px 2px, rgba(99, 99, 99, 0.07) 0 2px 4px,
+    rgba(99, 99, 99, 0.07) 0 4px 8px, rgba(99, 99, 99, 0.07) 0 8px 16px,
+    rgba(99, 99, 99, 0.07) 0 16px 32px, rgba(99, 99, 99, 0.07) 0 32px 64px;
 }
 
 .projects a {
@@ -35,7 +38,6 @@
   font-weight: 500;
   text-decoration: none; /* No need to repeat this for every state */
 }
-
 
 .projects a:link {
   color: var(--ifm-color-gray-700);
@@ -66,11 +68,10 @@
   text-align: left;
   flex-grow: 1;
   margin: 0;
-
 }
 
 [data-theme="dark"] .projectHeadText {
-  color: var(--ifm-color-white)
+  color: var(--ifm-color-white);
 }
 
 .projectText {
@@ -78,7 +79,7 @@
   text-align: left;
   font-size: 1rem;
   margin-top: 1rem;
-  height: 5rem;
+  flex-grow: 1;
 }
 
 .projectBody {
@@ -91,7 +92,7 @@
 }
 
 [data-theme="dark"] .projectBody {
-    color: var(--ifm-color-gray-100)
+  color: var(--ifm-color-gray-100);
 }
 
 .logo {
@@ -105,8 +106,7 @@
   min-width: 50px;
 }
 
-
 .callToAction {
   color: var(--ifm-color-primary);
-  flex-grow: 1;
+  margin-bottom: 0;
 }
