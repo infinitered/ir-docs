@@ -24,18 +24,10 @@ const theme: PrismTheme = {
     },
     {
       types: [
-        "constant",
-      ],
-      style: {
-        color: "#863301",
-        fontWeight: "500"
-      },
-    },
-    {
-      types: [
         "imports",
         "doctype",
         "builtin",
+        "constant",
       ],
       style: {
         color: "#863301",
