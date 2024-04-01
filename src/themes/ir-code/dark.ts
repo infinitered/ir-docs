@@ -5,7 +5,7 @@ import type {PrismTheme} from "prism-react-renderer"
 
 const theme: PrismTheme = {
   plain: {
-    color: "#ebdbb2",
+    color: "#e6e1d5",
     backgroundColor: "#292828",
   },
   styles: [
@@ -14,51 +14,54 @@ const theme: PrismTheme = {
         "class-name",
         "maybe-class-name",
         "sealed class",
+        "constant",
       ],
       style: {
-        color: "#48a995",
+        color: "#aad5e7",
+        fontWeight: "500"
+
       },
     },
     {
       types: [
         "imports",
-        "constant",
         "doctype",
         "builtin",
         "function",
       ],
       style: {
-        color: "#d8a657",
+        color: "#f1c98e",
+        fontWeight: "400"
       },
     },
     {
       types: ["property-access"],
       style: {
-        color: "#7daea3",
+        color: "#74e1c9",
       },
     },
     {
       types: ["tag"],
       style: {
-        color: "#e78a4e",
+        color: "#ffc19a",
       },
     },
     {
       types: ["attr-name", "char", "url", "regex"],
       style: {
-        color: "#a9b665",
+        color: "#bcce67",
       },
     },
     {
       types: ["attr-value", "string"],
       style: {
-        color: "#89b482",
+        color: "#93c78b",
       },
     },
     {
       types: ["comment", "prolog", "cdata", "operator", "inserted"],
       style: {
-        color: "#a89984",
+        color: "#dbc7e5",
       },
     },
     {
@@ -72,15 +75,29 @@ const theme: PrismTheme = {
         "deleted",
       ],
       style: {
-        color: "#ea6962",
+        color: "#fca39d",
+        fontWeight:"400"
       },
     },
     {
       types: ["entity", "number", "symbol"],
       style: {
-        color: "#d3869b",
+        color: "#eaa3b7",
       },
     },
+    {
+      types: ["punctuation"],
+      style: {
+        color: "#f5f2ed",
+        fontWeight: "300"
+      }
+    },
+    {
+      types:["function-variable"],
+      style:{
+        color:"#f1c98e"
+      }
+    }
   ],
 }
 export default theme

@@ -13,13 +13,14 @@ const theme: PrismTheme = {
         "sealed class",
       ],
       style: {
-        color: "#023C2E",
+        color: "#215e4d",
+        fontWeight: "500",
       },
     },
     {
       types: ["tag"],
       style: {
-        color: "#c94c00",
+        color: "#943800",
       },
     },
     {
@@ -30,7 +31,8 @@ const theme: PrismTheme = {
         "builtin",
       ],
       style: {
-        color: "#833000",
+        color: "#824425",
+        fontWeight: "500"
       },
     },
     {
@@ -41,26 +43,27 @@ const theme: PrismTheme = {
         "function"
       ],
       style: {
-        color: "#00624a",
+        color: "#0a3862",
       },
     },
 
     {
       types: ["attr-name", "char", "url", "regex"],
       style: {
-        color: "#67790a",
+        color: "#4d5a07",
       },
     },
     {
       types: ["attr-value", "string"],
       style: {
-        color: "#3f6b00",
+        color: "#355b04",
       },
     },
     {
       types: ["comment", "prolog", "cdata", "inserted"],
       style: {
-        color: "#a16600",
+        color: "#59469c",
+        fontStyle: "italic",
       },
     },
     {
@@ -74,13 +77,14 @@ const theme: PrismTheme = {
         "deleted",
       ],
       style: {
-        color: "#ce261a",
+        color: "#971111",
+        fontWeight: "400"
       },
     },
     {
       types: ["entity", "number", "symbol"],
       style: {
-        color: "#91324c",
+        color: "#880c31",
       },
     },
     { // New group for punctuation (light gray)

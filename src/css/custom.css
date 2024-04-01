@@ -2,6 +2,15 @@
 /*bundles Infima by default. Infima is a CSS framework designed to*/
 /*work well for content-centric websites.*/
 
+@font-face {
+    font-family: "NotoSans-Mono";
+    src: url(../../static/font/NotoSansMono-Regular.ttf) format('ttf');
+}
+
+pre {
+    font-family: "NotoSans-Mono", monospace;
+    font-weight: 400;
+}
 
 :root {
     /*BRAND*/
@@ -386,7 +395,7 @@ body {
 }
 
 .code-block-success-line {
-    background-color: rgba(152, 255, 0, 0.2);
+    background-color: rgba(152, 255, 0, 0.13);
     display: block;
     margin: 0 calc(-1 * var(--ifm-pre-padding));
     padding: 0 var(--ifm-pre-padding);
@@ -394,7 +403,7 @@ body {
 }
 
 .code-block-error-line {
-    background-color: rgba(255, 0, 1, 0.15);
+    background-color: rgba(255, 0, 1, 0.10);
     display: block;
     margin: 0 calc(-1 * var(--ifm-pre-padding));
     padding: 0 var(--ifm-pre-padding);
@@ -402,7 +411,7 @@ body {
 }
 
 .code-block-warning-line {
-    background-color: rgba(250, 200, 0, 0.2);
+    background-color: rgba(255, 179, 0, 0.13);
     display: block;
     margin: 0 calc(-1 * var(--ifm-pre-padding));
     padding: 0 var(--ifm-pre-padding);
@@ -411,7 +420,7 @@ body {
 
 
 .code-block-highlight-line {
-    background-color: rgba(198, 179, 243, 0.2);
+    background-color: rgba(198, 179, 243, 0.13);
     display: block;
     margin: 0 calc(-1 * var(--ifm-pre-padding));
     padding: 0 var(--ifm-pre-padding);
