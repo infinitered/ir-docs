@@ -2,9 +2,10 @@ import type {PrismTheme} from "prism-react-renderer"
 
 const theme: PrismTheme = {
   plain: {
-    backgroundColor: "#f2efef",
+    backgroundColor: "#f7f5f5",
     color: "#292828",
   },
+
   styles: [
     {
       types: [
@@ -13,7 +14,8 @@ const theme: PrismTheme = {
         "sealed class",
       ],
       style: {
-        color: "#1c5a49",
+        color: "#563fa2",
+        fontWeight: "500"
       },
     },
     {
@@ -30,8 +32,8 @@ const theme: PrismTheme = {
         "constant",
       ],
       style: {
-        color: "#863301",
-        fontWeight: "400"
+        color: "#3c7b03",
+        fontWeight: "600",
       },
     },
     {
@@ -40,35 +42,27 @@ const theme: PrismTheme = {
         "property",
       ],
       style: {
-        color: "#0a3862",
+        color: "#225f95",
       },
-    },
-    {
-      types: [
-        "variable",
-        "function"],
-      style:{
-        color: "#156851",
-        fontWeight: "400"
-      }
     },
     {
       types: ["attr-name", "char", "url", "regex"],
       style: {
-        color: "#4a5407",
+        color: "#290f79",
       },
     },
     {
       types: ["attr-value", "string"],
       style: {
-        color: "#335803",
+        color: "#3c7b03",
       },
     },
     {
-      types: ["comment", "prolog", "cdata", "inserted"],
+      types: ["comment", "prolog", "cdata"],
       style: {
-        color: "#544292",
+        color: "#2b5a00",
         fontStyle: "italic",
+        fontWeight: "400"
       },
     },
     {
@@ -79,12 +73,19 @@ const theme: PrismTheme = {
         "selector",
         "important",
         "atrule",
-        "deleted",
       ],
       style: {
         color: "#971111",
-        fontWeight: "400"
+        fontWeight: "600",
       },
+    },
+    {
+      types: [
+        "variable",
+        "function"],
+      style:{
+        color: "#8000c7",
+      }
     },
     {
       types: ["entity", "number", "symbol"],
@@ -110,6 +111,20 @@ const theme: PrismTheme = {
         color: "#8000c7",
       },
     },
+    {
+      types: ["inserted"],
+      style: {
+        color: "#103600",
+        backgroundColor:"rgba(84,255,0,0.19)",
+      },
+    },
+    {
+      types: ["deleted"],
+      style: {
+        color: "#670e0e",
+        backgroundColor: "rgba(255,0,0,0.13)",
+      },
+    }
   ],
 }
 export default theme

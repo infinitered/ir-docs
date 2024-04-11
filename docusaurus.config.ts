@@ -2,14 +2,13 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 import {Options} from '@docusaurus/preset-classic';
-import {themes} from 'prism-react-renderer';
 import {irCode} from './src/themes/ir-code';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import sidebars from './sidebars';
 
 
-const lightCodeTheme = irCode.light
+const lightCodeTheme = irCode.light;
 const darkCodeTheme = irCode.dark;
 
 const navbarItems = Object.keys(sidebars).map((sidebarId):{
