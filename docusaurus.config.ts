@@ -1,12 +1,23 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const sidebars = require('./sidebars');
+import {Options} from '@docusaurus/preset-classic';
+import {themes} from 'prism-react-renderer';
+import {irCode} from './src/themes/ir-code';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import sidebars from './sidebars';
 
-// Create navbar items based on sidebars
-const navbarItems = Object.keys(sidebars).map((sidebarId) => {
+
+const lightCodeTheme = irCode.light
+const darkCodeTheme = irCode.dark;
+
+const navbarItems = Object.keys(sidebars).map((sidebarId):{
+  type:string,
+  sidebarId:string,
+  position:'left' | 'right',
+  label: string,
+} => {
   return {
     type: 'docSidebar',
     sidebarId,
@@ -15,8 +26,10 @@ const navbarItems = Object.keys(sidebars).map((sidebarId) => {
   };
 });
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+
+
+
+const config:Config = {
   title: 'Open Source at Infinite Red',
   tagline: 'Tools to supercharge your React Native development!',
   favicon: 'img/favicon.ico',
@@ -51,7 +64,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -64,12 +76,11 @@ const config = {
           trackingID: 'G-H431N07LX7',
           anonymizeIP: true,
         },
-      }),
-    ],
+      }) satisfies Options,
+    ] ,
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/irVertical.jpg',
@@ -130,10 +141,43 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Infinite Red, Inc. Built with Docusaurus.`,
       },
       prism: {
+        additionalLanguages: [
+          'bash',
+          'json',
+          'diff',
+          'ruby',
+          'gradle',
+          'java',
+          'yaml',
+          'kotlin',
+          'groovy',
+          'ejs',
+          'markup-templating'
+        ],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        magicComments: [
+          {
+            className: 'code-block-highlight-line',
+            line: 'highlight-line',
+            block: {start: 'highlight-start', end: 'highlight-end'},
+          },
+          {
+            className: 'code-block-success-line',
+            line: 'success-line',
+            block: {start: 'success-start', end: 'success-end'},
+          },{
+            className: 'code-block-warning-line',
+            line: 'warning-line',
+            block: {start: 'warning-start', end: 'warning-end'},
+          },{
+            className: 'code-block-error-line',
+            line: 'error-line',
+            block: {start: 'error-start', end: 'error-end'},
+          },
+        ],
       },
-    }),
+    }) satisfies Preset.ThemeConfig,
 };
 
 module.exports = config;

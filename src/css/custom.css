@@ -2,6 +2,16 @@
 /*bundles Infima by default. Infima is a CSS framework designed to*/
 /*work well for content-centric websites.*/
 
+@font-face {
+    font-family: "NotoSans-Mono";
+    src: url(../../static/font/NotoSansMono-Regular.ttf) format('ttf');
+}
+
+pre {
+    font-family: "NotoSans-Mono", monospace;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
 
 :root {
     /*BRAND*/
@@ -190,6 +200,8 @@
     --ifm-footer-link-color: var(--ifm-color-white);
 }
 
+
+
 html[data-theme='dark'] {
     --ifm-card-background-color: var(--ifm-color-emphasis-500);
     --ifm-color-primary-contrast-background: var(--ir-brand-800);
@@ -204,8 +216,6 @@ html[data-theme='dark'] {
     --ifm-color-danger-contrast-foreground: var(--ifm-color-white);
     --ifm-color-success-contrast-background: var(--ifm-color-success-dark);
     --ifm-color-success-contrast-foreground: var(--ifm-color-white);
-
-
 }
 
 [data-theme='dark'] :root {
@@ -383,4 +393,37 @@ html[data-theme='dark'] {
 
 body {
     font-family: "Montserrat (compressed)", Trebuchet MS, sans-serif
+}
+
+.code-block-success-line {
+    background-color: rgba(152, 255, 0, 0.13);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid rgba(151, 255, 0, 0.5);
+}
+
+.code-block-error-line {
+    background-color: rgba(255, 0, 1, 0.10);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid rgba(255, 0, 1, 0.5);
+}
+
+.code-block-warning-line {
+    background-color: rgba(255, 179, 0, 0.13);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid rgba(255, 144, 0, 0.5);
+}
+
+
+.code-block-highlight-line {
+    background-color: rgba(198, 179, 243, 0.13);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid rgba(198, 179, 243, 0.5);
 }
