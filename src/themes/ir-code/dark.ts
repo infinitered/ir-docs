@@ -14,36 +14,34 @@ const theme: PrismTheme = {
         "class-name",
         "maybe-class-name",
         "sealed class",
-        "constant",
       ],
       style: {
-        color: "#aad5e7",
+        color: "#b6d3e3",
         fontWeight: "500"
 
-      },
-    },
-    {
-      types: [
-        "imports",
-        "doctype",
-        "builtin",
-        "function",
-      ],
-      style: {
-        color: "#f1c98e",
-        fontWeight: "400"
-      },
-    },
-    {
-      types: ["property-access"],
-      style: {
-        color: "#74e1c9",
       },
     },
     {
       types: ["tag"],
       style: {
         color: "#ffc19a",
+      },
+    },
+    {
+      types: [
+        "imports",
+        "doctype",
+        "function",
+      ],
+      style: {
+        color: "#cfba9b",
+        fontWeight: "600"
+      },
+    },
+    {
+      types: ["property-access", "property"],
+      style: {
+        color: "#caa9de",
       },
     },
     {
@@ -59,9 +57,11 @@ const theme: PrismTheme = {
       },
     },
     {
-      types: ["comment", "prolog", "cdata", "operator", "inserted"],
+      types: ["comment", "prolog", "cdata"],
       style: {
-        color: "#dbc7e5",
+        color: "#cfc46d",
+        fontStyle: "italic",
+        fontWeight: "200"
       },
     },
     {
@@ -72,13 +72,14 @@ const theme: PrismTheme = {
         "selector",
         "important",
         "atrule",
-        "deleted",
+        "builtin",
       ],
       style: {
-        color: "#fca39d",
+        color: "#E3847D",
         fontWeight:"400"
       },
     },
+
     {
       types: ["entity", "number", "symbol"],
       style: {
@@ -86,7 +87,7 @@ const theme: PrismTheme = {
       },
     },
     {
-      types: ["punctuation"],
+      types: ["punctuation", "operator",],
       style: {
         color: "#f5f2ed",
         fontWeight: "300"
@@ -97,6 +98,20 @@ const theme: PrismTheme = {
       style:{
         color:"#f1c98e"
       }
+    },
+    {
+      types: ["inserted"],
+      style: {
+        color: "#8ad968",
+        backgroundColor: "rgba(84,255,0,0.13)",
+      },
+    },
+    {
+      types: ["deleted"],
+      style: {
+        color: "#fd6464",
+        backgroundColor: "rgba(245,52,52,0.13)",
+      },
     }
   ],
 }
