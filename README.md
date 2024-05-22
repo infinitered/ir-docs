@@ -186,7 +186,7 @@ docs/
 ├── part-one.md
 ├── part-two.md
 └── _static_
-└── image.png
+   └── image.png
 ```
 
 During the documentation merge process, the orb will automatically move the contents of _static_ to the appropriate location in the target repository.
@@ -198,7 +198,7 @@ source-repo/
 └── docs/
 │ ├── part-one.md
 │ └── part-two.md
-└── _static_/
+  └── _static_/
     └── image.png
 ```
 
@@ -211,7 +211,7 @@ ir-docs/
 │ └── part-two.md
 └── static/
     └── <<project-name>>
-    └── image.png
+       └── image.png
 ```
     
 By following this convention, you ensure that all static files and documents are correctly placed in the target repository, under docs/<<project-name>> for documents and static/<<project-name>> for static files.
