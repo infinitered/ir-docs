@@ -176,6 +176,26 @@ const config:Config = {
           },
         ],
       },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: "PF58ZGOE1X",
+
+      // Public API key: it is safe to commit it
+      apiKey: "124e3bdd34363402f406c662f8a542d3",
+
+      indexName: "infinite",
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: "search",
+
+      //... other Algolia params
+    },
     }) satisfies Preset.ThemeConfig,
 };
 
