@@ -6,6 +6,10 @@ sidebar_position: 31
 
 The `Button` component is a wrapper around the [`Pressable`](https://reactnative.dev/docs/pressable) component. Any prop that can be passed to `Pressable` can be passed to `Button` and it will be forwarded. `Button` renders a button with given text in a [`Text`](./Text.md) component or children. It allows you to specify the preset style of the button, you can override both the `Pressable` and `Text` styles.
 
+![button](../../../../../static/img/button-component.png)
+
+# Usage
+
 ```tsx
 <Button
   text="Click It"
@@ -62,22 +66,28 @@ To make a custom preset, add a key to the `$viewPresets`, `$textPresets`, `$pres
 ```tsx
 const $viewPresets = {
   // ...
-  danger: [$baseViewStyle, { backgroundColor: colors.palette.angry500 }] as StyleProp<ViewStyle>,
-}
+  danger: [
+    $baseViewStyle,
+    { backgroundColor: colors.palette.angry500 },
+  ] as StyleProp<ViewStyle>,
+};
 
 const $textPresets: Record<Presets, StyleProp<TextStyle>> = {
   // ...
-  danger: [$baseTextStyle, { color: colors.palette.angry500 }] as StyleProp<TextStyle>,
-}
+  danger: [
+    $baseTextStyle,
+    { color: colors.palette.angry500 },
+  ] as StyleProp<TextStyle>,
+};
 
 const $pressedViewPresets: Record<Presets, StyleProp<ViewStyle>> = {
   // ...
   danger: { backgroundColor: colors.palette.angry500 },
-}
+};
 
 const $pressedTextPresets: Record<Presets, StyleProp<TextStyle>> = {
   angry: { opacity: 0.7 },
-}
+};
 ```
 
 ```tsx
@@ -139,7 +149,11 @@ The `LeftAccessory` and `RightAccessory` props are optional. They can be used to
 ```tsx
 <Button
   LeftAccessory={(props) => (
-    <Icon containerStyle={props.style} size={props.pressableState.pressed ? 50 : 40} icon="check" />
+    <Icon
+      containerStyle={props.style}
+      size={props.pressableState.pressed ? 50 : 40}
+      icon="check"
+    />
   )}
 />
 ```
@@ -147,7 +161,11 @@ The `LeftAccessory` and `RightAccessory` props are optional. They can be used to
 ```tsx
 <Button
   RightAccessory={(props) => (
-    <Icon containerStyle={props.style} size={props.pressableState.pressed ? 50 : 40} icon="check" />
+    <Icon
+      containerStyle={props.style}
+      size={props.pressableState.pressed ? 50 : 40}
+      icon="check"
+    />
   )}
 />
 ```
@@ -159,9 +177,9 @@ If the accessories flicker when some prop or state changes, you can memoize the 
   LeftAccessory={useMemo(
     () =>
       function LeftIcon(props: ButtonAccessoryProps) {
-        return <Icon icon={props.pressableState.pressed ? "view" : "hidden"} />
+        return <Icon icon={props.pressableState.pressed ? "view" : "hidden"} />;
       },
-    [],
+    []
   )}
 />
 ```

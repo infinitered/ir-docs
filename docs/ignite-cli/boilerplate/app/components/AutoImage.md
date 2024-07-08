@@ -6,9 +6,15 @@ sidebar_position: 30
 
 Ignite's `AutoImage` Component is an enhanced version of the built-in React Native [Image](https://reactnative.dev/docs/image) component. It automatically resizes the image view to fit a max width or height constraint
 
+![autoimage](../../../../../static/img/autoimage-component.png)
+
+# Usage
+
 ```tsx
 <AutoImage
-  source={{ uri: "https://pbs.twimg.com/profile_images/845384502067159040/pqF2RQ2q_400x400.jpg" }}
+  source={{
+    uri: "https://pbs.twimg.com/profile_images/845384502067159040/pqF2RQ2q_400x400.jpg",
+  }}
   maxWidth={200}
 />
 ```
@@ -16,7 +22,7 @@ Ignite's `AutoImage` Component is an enhanced version of the built-in React Nati
 `AutoImage` uses a `useAutoImage` hook to calculate the image's dimensions when you have a specific values you need to constrain the image within. This hook is also available for use in your own components.
 
 ```tsx
-const { width, height } = useAutoImage(uri, maxWidth, maxHeight)
+const { width, height } = useAutoImage(uri, maxWidth, maxHeight);
 ```
 
 ## Props
@@ -29,7 +35,9 @@ These props are used to constrain the image to a specific size. Use `maxWidth` o
 
 ```tsx
 <AutoImage
-  source={{ uri: "https://pbs.twimg.com/profile_images/845384502067159040/pqF2RQ2q_400x400.jpg" }}
+  source={{
+    uri: "https://pbs.twimg.com/profile_images/845384502067159040/pqF2RQ2q_400x400.jpg",
+  }}
   maxWidth={200}
   maxHeight={200}
 />
