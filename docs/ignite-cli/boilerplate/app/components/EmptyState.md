@@ -30,8 +30,16 @@ The `EmptyState` component is to be used when there is no data to display, usual
 
 The `preset` prop is used to set the preset container style of the EmptyState. This affects the default image, heading, content and button. Currently, only one preconfigured preset exists: `generic`.
 
+![emptystate-preset](../../../../../static/img/empty-state.png)
+
+### Usage
+
 ```tsx
-<EmptyState preset="generic" heading="EmptyState Heading" content="EmptyState Content" />
+<EmptyState
+  preset="generic"
+  heading="EmptyState Heading"
+  content="EmptyState Content"
+/>
 ```
 
 ### `style`
@@ -89,7 +97,11 @@ The `ImageProps` prop is used to pass any additional props directly to the `Imag
 The `heading` prop is used to set the heading text of the EmptyState.
 
 ```tsx
-<EmptyState heading="EmptyState Heading" content="EmptyState Content" button="EmptyState Button" />
+<EmptyState
+  heading="EmptyState Heading"
+  content="EmptyState Content"
+  button="EmptyState Button"
+/>
 ```
 
 ### `headingTx`
@@ -148,7 +160,11 @@ The `HeadingTextProps` prop is used to pass any additional props to the heading 
 The `content` prop is used to set the content text of the EmptyState.
 
 ```tsx
-<EmptyState heading="EmptyState Heading" content="EmptyState Content" button="EmptyState Button" />
+<EmptyState
+  heading="EmptyState Heading"
+  content="EmptyState Content"
+  button="EmptyState Button"
+/>
 ```
 
 ### `contentTx`
@@ -184,7 +200,10 @@ The `contentStyle` prop is used to set the style of the content text.
 <EmptyState
   heading="EmptyState Heading"
   content="EmptyState Content"
-  contentStyle={{ backgroundColor: colors.error, color: colors.palette.neutral100 }}
+  contentStyle={{
+    backgroundColor: colors.error,
+    color: colors.palette.neutral100,
+  }}
   button="EmptyState Button"
 />
 ```
@@ -207,7 +226,11 @@ The `ContentTextProps` prop is used to pass any additional props to the content 
 The `button` prop is used to set the button text of the EmptyState.
 
 ```tsx
-<EmptyState heading="EmptyState Heading" content="EmptyState Content" button="EmptyState Button" />
+<EmptyState
+  heading="EmptyState Heading"
+  content="EmptyState Content"
+  button="EmptyState Button"
+/>
 ```
 
 ### `buttonTx`

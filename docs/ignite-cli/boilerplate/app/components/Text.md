@@ -8,6 +8,8 @@ Ignite's `Text` Component is an enhanced version of the built-in React Native [`
 
 By enhancing the Ignite Text component and using it across your app, you can make sure the right fonts, font weight, and other styles and behaviors are shared across your whole app.
 
+![text-component](../../../../../static/img/text-component.png)
+
 ## Props
 
 ### `text`
@@ -35,7 +37,7 @@ The `txOptions` optional prop is an object of options to pass to i18n. Useful fo
 ```tsx
 // in en.json
 profile: {
-  details: "{{name}} who is {{age}} years old"
+  details: "{{name}} who is {{age}} years old";
 }
 ```
 
@@ -114,8 +116,12 @@ Feel free to add your own presets by emulating the style you see with the provid
 
 ```tsx
 $presets = {
-  label: [$baseStyle, $sizeStyles.md, $fontWeightStyles.medium] as StyleProp<TextStyle>,
-}
+  label: [
+    $baseStyle,
+    $sizeStyles.md,
+    $fontWeightStyles.medium,
+  ] as StyleProp<TextStyle>,
+};
 ```
 
 ```tsx

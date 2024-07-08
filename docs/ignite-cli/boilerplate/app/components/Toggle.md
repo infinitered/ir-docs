@@ -6,6 +6,8 @@ sidebar_position: 41
 
 This component is a flexible component that can be used to toggle a boolean value. It can be used to render a switch, checkbox, or radio button, and exposes style props for every element.
 
+![toggle-component](../../../../../static/img/toggle-component.png)
+
 ## Props
 
 ### `variant`
@@ -55,7 +57,11 @@ The `onValueChange` prop is a callback that is called when the toggle is toggled
 The `containerStyle` prop is a style object that is applied to the container of the toggle.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} containerStyle={{ backgroundColor: "#fff" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  containerStyle={{ backgroundColor: "#fff" }}
+/>
 ```
 
 ### `inputOuterStyle`
@@ -63,7 +69,11 @@ The `containerStyle` prop is a style object that is applied to the container of 
 The `inputOuterStyle` prop is a style object that is applied to the outer container of the toggle input. This gives the inputs their size, shape, "off" background-color, and outer border.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} inputOuterStyle={{ backgroundColor: "#fff" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  inputOuterStyle={{ backgroundColor: "#fff" }}
+/>
 ```
 
 ### `inputInnerStyle`
@@ -71,7 +81,11 @@ The `inputOuterStyle` prop is a style object that is applied to the outer contai
 The `inputInnerStyle` prop is a style object that is applied to the inner container of the toggle input. This gives the inputs their "on" background-color and inner border.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} inputInnerStyle={{ backgroundColor: "#000" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  inputInnerStyle={{ backgroundColor: "#000" }}
+/>
 ```
 
 ### `inputDetailStyle`
@@ -79,7 +93,11 @@ The `inputInnerStyle` prop is a style object that is applied to the inner contai
 The `inputDetailStyle` prop is a style object that is applied to the detail container of the toggle input. For checkbox, this affects the Image component. For radio, this affects the dot View. For switch, this affects the knob View.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} inputDetailStyle={{ backgroundColor: "#000" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  inputDetailStyle={{ backgroundColor: "#000" }}
+/>
 ```
 
 ### `labelPosition`
@@ -103,7 +121,11 @@ The `label` prop is a string that is used as the label for the toggle.
 The `labelTx` prop is a key to a string in the `i18n` translation file. It is used as the label for the toggle.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} labelTx="login.rememberUsername" />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  labelTx="login.rememberUsername"
+/>
 ```
 
 ### `labelTxOptions`
@@ -132,7 +154,11 @@ The `labelStyle` prop is a `StyleProp<TextStyle>` object that is applied to the 
 The `LabelTextProps` prop is a `TextProps` object (from the [`Text`](./Text.md)) component that is applied to the label.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} LabelTextProps={{ size: "lg" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  LabelTextProps={{ size: "lg" }}
+/>
 ```
 
 ### `helper`
@@ -148,7 +174,11 @@ The `helper` prop is a string that is used as the helper for the toggle.
 The `helperTx` prop is a key to a string in the `i18n` translation file. It is used as the helper for the toggle.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} helperTx="login.rememberUsername" />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  helperTx="login.rememberUsername"
+/>
 ```
 
 ### `helperTxOptions`
@@ -169,7 +199,11 @@ The `helperTxOptions` prop is an object that is passed to the `i18n` translation
 The `HelperTextProps` prop is a `TextProps` object (from the [`Text`](./Text.md)) component that is applied to the helper.
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} HelperTextProps={{ size: "lg" }} />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  HelperTextProps={{ size: "lg" }}
+/>
 ```
 
 ### `switchAccessibilityMode`
@@ -177,7 +211,12 @@ The `HelperTextProps` prop is a `TextProps` object (from the [`Text`](./Text.md)
 The `switchAccessibilityMode` is a special prop for the switch variant that adds a text/icon label for on/off states. Options are `text` and `icon`
 
 ```tsx
-<Toggle value={value} onValueChange={setValue} variant="switch" switchAccessibilityMode="icon" />
+<Toggle
+  value={value}
+  onValueChange={setValue}
+  variant="switch"
+  switchAccessibilityMode="icon"
+/>
 ```
 
 ### `checkboxIcon`
