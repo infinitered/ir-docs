@@ -10,7 +10,6 @@ export default function NavbarWrapper(props) {
     navbar: { items },
   } = useThemeConfig();
 
-
   const repoUrl = repoUrls[pathname.split("/").at(1)];
   const updatedItems = (items[items.length - 1] = {
     href: repoUrl,
