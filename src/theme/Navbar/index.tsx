@@ -17,9 +17,5 @@ export default function NavbarWrapper(props) {
     position: "right",
   });
 
-  return (
-    <>
-      <Navbar {...props} items={updatedItems} />
-    </>
-  );
+  return <Navbar {...props} items={updatedItems} />;
 }
