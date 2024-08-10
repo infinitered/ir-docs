@@ -1,6 +1,5 @@
 {
   "//": "This JSON is automatically generated with '_category_.json' in each document located in the '/docs' directory.",
-  "reactotron": "https://github.com/infinitered/reactotron",
   "react-native-mlkit": "https://github.com/infinitered/react-native-mlkit",
   "gluegun": "https://github.com/infinitered/gluegun"
 }
