@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Open Source at Infinite Red" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c9c6a75d.css">
-<script src="/assets/js/runtime~main.60545bdd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.afad5728.js" defer="defer"></script>
 <script src="/assets/js/main.4256b343.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,11 +23,11 @@
 <li>The Electron app with Reactotron&#x27;s UI, which subscribes to app updates</li>
 <li>The app client that we are debugging, which sends commands with information about the app to the server</li>
 </ol>
-<img src="./images/architecture-app-mobile-diagram.png" alt="Diagram of the Reactotron Electron app, reactotron-core-server, and the app client">
+<p><img decoding="async" loading="lazy" alt="Diagram of the Reactotron Electron app, reactotron-core-server, and the app client." src="/assets/images/architecture-app-mobile-diagram-5d0a36900adc6aca567a1a974a24b5f4.png" width="1571" height="909" class="img_ev3q"></p>
 <p>Websockets are used to sends &quot;commands&quot;, which are JSON objects with information about the app we are debugging. The payloads are sent to the server, which then publishes them to all subscribers (like the Electron app).</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="workspaces">Workspaces<a href="#workspaces" class="hash-link" aria-label="Direct link to Workspaces" title="Direct link to Workspaces">​</a></h2>
 <p>This repository is broken into different workspaces:</p>
-<img src="./images/architecture-workspace-chart.png" alt="Diagram of the Reactotron electron app and client, and which workspaces they correspond to.">
+<p><img decoding="async" loading="lazy" alt="Diagram of the Reactotron electron app and client, and which workspaces they correspond to." src="/assets/images/architecture-workspace-chart-c7259b6269864571b963440fc9cb06ea.png" width="2048" height="981" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="reactotron-app">Reactotron app<a href="#reactotron-app" class="hash-link" aria-label="Direct link to Reactotron app" title="Direct link to Reactotron app">​</a></h3>
 <p>These workspaces are used to build the Electron app that runs Reactotron.</p>
 <ul>
