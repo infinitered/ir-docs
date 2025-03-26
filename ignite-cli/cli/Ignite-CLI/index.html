@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Open Source at Infinite Red" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c9c6a75d.css">
-<script src="/assets/js/runtime~main.f2695755.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6bc078dd.js" defer="defer"></script>
 <script src="/assets/js/main.ef3f0383.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -67,14 +67,14 @@
 <li><code>--overwrite</code> overwrite the target directory if it exists</li>
 <li><code>--targetPath</code> string, specify a target directory where the project should be created</li>
 <li><code>--removeDemo</code> will remove the boilerplate demo code after project creation</li>
-<li><code>--state</code> string, one of <code>mst</code> or <code>none</code> to include MobX-State-Tree in project (can only be set to <code>none</code> if <code>--removeDemo=true</code>)</li>
+<li><code>--state</code> string, one of <code>mst</code> or <code>none</code> to include MobX-State-Tree in project (<strong>note:</strong> if opting out of MobX-State-Tree the demo application will be removed)</li>
 <li><code>--useCache</code> flag specifying to use dependency cache for quicker installs</li>
 <li><code>--no-timeout</code> flag to disable the timeout protection (useful for slow internet connections)</li>
 <li><code>--yes</code> accept all prompt defaults</li>
 <li><code>--workflow</code> string, one of <code>cng</code> or <code>manual</code> for project initialization</li>
 <li><code>--experimental</code> comma separated string, indicates experimental features (which may or may not be stable) to turn on during installation. <strong>A CNG workflow is require for these flags</strong> <code>--workflow=cng</code>
 <ul>
-<li><code>expo-router</code> converts the project to <a href="https://docs.expo.dev/router/introduction/" target="_blank" rel="noopener noreferrer">Expo Router</a> from React Navigation</li>
+<li><code>expo-router</code> converts the base project to use <a href="https://docs.expo.dev/router/introduction/" target="_blank" rel="noopener noreferrer">Expo Router</a> from React Navigation (<strong>note:</strong> the demo application will be removed)</li>
 <li><code>new-arch</code> enables <a href="https://reactnative.dev/docs/new-architecture-intro" target="_blank" rel="noopener noreferrer">The New Architecture</a></li>
 <li><code>expo-canary</code> uses Expo&#x27;s highly experimental canary release instead of the la test stable SDK</li>
 <li><code>expo-beta</code> uses Expo&#x27;s latest beta SDK available instead of the latest stable SDK</li>
