@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react",
-    "resolveJsonModule": true,
-  }
+    "resolveJsonModule": true
+  },
+  "exclude": [".docusaurus", "build"]
 }
