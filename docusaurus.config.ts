@@ -1,21 +1,19 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-import {Options} from '@docusaurus/preset-classic';
-import {irCode} from './src/themes/ir-code';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { irCode } from './src/themes/ir-code';
+import type { Config } from '@docusaurus/types';
+import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
 import sidebars from './sidebars';
-
 
 const lightCodeTheme = irCode.light;
 const darkCodeTheme = irCode.dark;
 
-const navbarItems = Object.keys(sidebars).map((sidebarId):{
-  type:string,
-  sidebarId:string,
-  position:'left' | 'right',
-  label: string,
+const navbarItems = Object.keys(sidebars).map((sidebarId): {
+  type: string;
+  sidebarId: string;
+  position: 'left' | 'right';
+  label: string;
 } => {
   return {
     type: 'docSidebar',
@@ -25,10 +23,7 @@ const navbarItems = Object.keys(sidebars).map((sidebarId):{
   };
 });
 
-
-
-
-const config:Config = {
+const config: Config = {
   title: 'Open Source at Infinite Red',
   tagline: 'Tools to supercharge your React Native development!',
   favicon: 'img/favicon.ico',
@@ -48,9 +43,9 @@ const config:Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace 'en' with 'zh-Hans'.
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -63,7 +58,7 @@ const config:Config = {
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
@@ -75,8 +70,8 @@ const config:Config = {
           trackingID: 'G-H431N07LX7',
           anonymizeIP: true,
         },
-      }) satisfies Options,
-    ] ,
+      } satisfies Options,
+    ],
   ],
 
   themeConfig:
