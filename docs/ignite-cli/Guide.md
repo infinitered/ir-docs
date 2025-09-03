@@ -20,7 +20,7 @@ npx ignite-cli@latest new PizzaApp
 
 It'll walk you through several prompts to configure your package manager, navigation library and state management. Or you can simply take all the defaults via `--yes` and jump right into the demo application.
 
-Once it's up and running, you can use the Ignite CLI to [generate](./concept/Generators.md) components, screens, MST models, and more.
+Once it's up and running, you can use the Ignite CLI to [generate](./concept/Generators.md) components, screens, React context, and more.
 
 Running into errors? have a look at [Troubleshooting](./cli/Troubleshooting.md)
 
@@ -30,12 +30,10 @@ Your new Ignite project comes with a full stack of useful libraries, pre-set up 
 
 - React Native
 - React Navigation
-- MobX-State-Tree [(Why not Redux?)](./concept/MobX-State-Tree.md)
-- MobX-React-Lite
 - TypeScript
-- React Native MMKV (integrated with MST for restoring state)
+- React Native MMKV (integrated with React context for restoring state)
 - apisauce (to talk to REST servers)
-- Reactotron-ready (and pre-integrated with MST)
+- Reactotron-ready
 - Supports Expo (and Expo web) out of the box
 - About a dozen prebuilt [components](./boilerplate/app/components/Components.md) to build out your UI with
 - And more!
@@ -80,8 +78,8 @@ We instead use a strategy of constants, co-located with our components, camelCas
 
 ```tsx
 import { View, ViewStyle } from "react-native"
-import { useAppTheme } from "@/utils/useAppTheme"
-import type { ThemedStyle } from "@/theme"
+import { useAppTheme } from "@/theme/context"
+import type { ThemedStyle } from "@/theme/types"
 
 // This is a themed style that you must wrap with `themed()` to pass the style object.
 const $container: ThemedStyle<ViewStyle> = ({ colors }) => ({
@@ -108,3 +106,16 @@ const MyComponent = () => {
 Very often, we use [components with presets](./boilerplate/app/components/Components.md) to share styles across our whole app.
 
 Read more about styling in the [Styling](./concept/Styling.md) docs.
+
+## Patching local dependencies
+
+The react-native ecosystem moves quickly and sometimes, you may need to patch a library locally to get it working. This is especially true for libraries that are not well maintained or have not been updated to work with the latest version of React Native. Ignite used to ship with patches (pre-v10) that were applied with `yarn` and `patch-package`, but the boilerplate no longer needs any patches by default.
+
+Igniting an app allows you to choose `npm`, `yarn`, `pnpm`, or `bun` as a package manager, so we don't have configuration in the boilerplate for patches. If you find that you need to patch a library in your app, we recommend the following:
+
+- `npm` - use [`patch-package`](https://www.npmjs.com/package/patch-package).
+- `yarn@1` - use [`patch-package`](https://www.npmjs.com/package/patch-package).
+- `yarn@3` - use [`yarn patch` tool](https://v3.yarnpkg.com/features/protocols#patch).
+- `yarn@4` - use [`yarn patch` tool](https://yarnpkg.com/features/patching).
+- `pnpm` - use [`pnpm patch <package>`](https://pnpm.io/cli/patch).
+- `bun` - use [`bun patch <package>`](https://bun.sh/docs/install/patch).
