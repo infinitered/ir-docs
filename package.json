@@ -17,31 +17,20 @@
     "postinstall": "node ./scripts/generate-slug.ts"
   },
   "dependencies": {
-    "@docusaurus/core": "3.2.1",
-    "@docusaurus/preset-classic": "3.2.1",
-    "@docusaurus/remark-plugin-npm2yarn": "3.2.1",
+    "@docusaurus/core": "3.7.0",
+    "@docusaurus/preset-classic": "3.7.0",
     "@mdx-js/react": "^3.0.0",
-    "brfs": "^2.0.2",
-    "browserify-fs": "^1.0.0",
-    "buffer": "^6.0.3",
-    "clsx": "^1.2.1",
-    "https-browserify": "^1.0.0",
-    "os-browserify": "^0.3.0",
-    "path-browserify": "^1.0.1",
-    "prism-react-renderer": "^2.3.1",
-    "process": "^0.11.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
-    "util": "^0.12.5"
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.1.1",
-    "@docusaurus/tsconfig": "^3.0.0",
-    "@docusaurus/types": "3.1.1",
-    "@types/react": "^18.2.29",
-    "typescript": "^5.2.2"
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/tsconfig": "3.7.0",
+    "@docusaurus/types": "3.7.0",
+    "@types/react": "^19.0.0",
+    "typescript": "~5.6.2"
   },
   "browserslist": {
     "production": [
@@ -50,9 +39,9 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
   },
   "engines": {
