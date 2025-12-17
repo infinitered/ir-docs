@@ -114,8 +114,6 @@ The react-native ecosystem moves quickly and sometimes, you may need to patch a 
 Igniting an app allows you to choose `npm`, `yarn`, `pnpm`, or `bun` as a package manager, so we don't have configuration in the boilerplate for patches. If you find that you need to patch a library in your app, we recommend the following:
 
 - `npm` - use [`patch-package`](https://www.npmjs.com/package/patch-package).
-- `yarn@1` - use [`patch-package`](https://www.npmjs.com/package/patch-package).
-- `yarn@3` - use [`yarn patch` tool](https://v3.yarnpkg.com/features/protocols#patch).
 - `yarn@4` - use [`yarn patch` tool](https://yarnpkg.com/features/patching).
 - `pnpm` - use [`pnpm patch <package>`](https://pnpm.io/cli/patch).
 - `bun` - use [`bun patch <package>`](https://bun.sh/docs/install/patch).

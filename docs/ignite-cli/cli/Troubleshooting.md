@@ -26,4 +26,6 @@ You can uninstall previous versions of the cli with:
 npm uninstall --global ignite-cli
 # or
 yarn global remove ignite-cli
+#or
+pnpm remove ignite-cli -g
 ```
