@@ -3,6 +3,7 @@
   "position": 99,
   "link": {
     "type": "generated-index",
-    "description": "How to run the included example application."
+    "description": "How to run the included example application.",
+    "slug": "/react-native-mlkit/running-the-example-app/list"
   }
 }
