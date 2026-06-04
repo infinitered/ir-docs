@@ -3,7 +3,6 @@
   "position": 200,
   "link": {
     "type": "generated-index",
-    "description": "Label images with TFLite Models",
-    "slug": "/react-native-mlkit/image-labeling/list"
+    "description": "Label images with TFLite Models"
   }
 }
