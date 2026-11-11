@@ -50,6 +50,20 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Infinite Red',
+        url: 'https://infinite.red',
+        logo: 'https://docs.infinite.red/img/logo.svg',
+        sameAs: ['https://github.com/infinitered'],
+      }),
+    },
+  ],
   plugins: [
     require.resolve('./plugins/support-symlinks'),
     require.resolve('./plugins/homepage-items-plugin'),
@@ -78,6 +92,7 @@ const config: Config = {
     ({
       // Replace with your project's social card
       image: 'img/irVertical.jpg',
+      metadata: [{ property: 'og:type', content: 'website' }],
       navbar: {
         title: 'Open Source @ Infinite Red',
         logo: {
