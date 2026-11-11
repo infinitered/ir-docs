@@ -1,0 +1,12 @@
+# Open Source at Infinite Red
+
+> Documentation for Infinite Red's open source tools for React Native and Node development, all in one place.
+
+Maintained by [Infinite Red](https://infinite.red). Infinite Red is a U.S.-based software development team with over a decade of experience that brings deep engineering knowledge, clear judgment, and collaborative delivery.
+
+## Projects
+
+- [Ignite](https://docs.infinite.red/ignite-cli/): The battle-tested React Native boilerplate, maintained since 2016.
+- [Reactotron](https://docs.infinite.red/reactotron/): A desktop app for inspecting your React and React Native projects.
+- [React Native MLKit](https://docs.infinite.red/react-native-mlkit/): Use MLKit models in React Native and Expo apps.
+- [Gluegun](https://docs.infinite.red/gluegun/): A delightful toolkit for building Node-powered CLIs.
